@@ -26,6 +26,8 @@ public class StarEmitter : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             GameObject _star = Instantiate(star);
+
+            _star.transform.position = high.transform.position;
             _star.transform.localScale /= 4;
             stars.Enqueue(_star);
         }
