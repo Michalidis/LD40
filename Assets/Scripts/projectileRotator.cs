@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PolygonCollider2D))]
+[RequireComponent(typeof(ProjectileProperties))]
 public class ProjectileRotator : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
