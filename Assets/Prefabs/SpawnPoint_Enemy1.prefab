@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca20bd616199024bb2f8c8c1768350c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSpawn: 3.5
+  nextSpawn: 0.3
   defaultSpawnTime: 20
   ArrayOfEnemies:
   - {fileID: 1215431149468286, guid: f7abc1a7a8cf233489cd228af07cdf76, type: 2}
