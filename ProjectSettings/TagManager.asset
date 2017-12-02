@@ -19,8 +19,8 @@ TagManager:
   - VisibleWalls
   - ReflectedProjectiles
   - ProjectileDestroyers
-  - 
-  - 
+  - StarEmitter
+  - StarEmits
   - 
   - 
   - 
