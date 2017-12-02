@@ -38,6 +38,9 @@ public class ProjectileReflecter : MonoBehaviour
 
             ProjectileRotator prota = projectile.GetComponent<ProjectileRotator>();
             prota.FaceAwayFromDirection(transform.position);
+
+            ProjectileProperties prop = projectile.GetComponent<ProjectileProperties>();
+            prop.ChangeToReflected();
         }
     }
 

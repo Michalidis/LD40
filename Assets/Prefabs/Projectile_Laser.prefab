@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50103195614630222}
   - component: {fileID: 60124887569428364}
   - component: {fileID: 114418537855030218}
+  - component: {fileID: 114569861461469090}
   m_Layer: 10
   m_Name: Projectile_Laser
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1677199683398856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2672129, y: 0.3647658, z: 0.33122823}
+  m_LocalPosition: {x: -5.2905793, y: 0.41108394, z: 0.33122823}
   m_LocalScale: {x: 3.7229505, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,6 +103,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52ff99e23e60469419b3906132c5dfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114569861461469090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1677199683398856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c3fd90bed3c3e40999edd9d6a178ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212467673258784934

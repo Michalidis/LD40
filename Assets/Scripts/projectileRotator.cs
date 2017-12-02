@@ -17,7 +17,8 @@ public class ProjectileRotator : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 11)
+        int colLayer = collision.gameObject.layer;
+        if (colLayer == 10 || colLayer == 11 || colLayer == 12)
             FaceVelocity();
         else
             Destroy(gameObject);
