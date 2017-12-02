@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4524098549645710}
   - component: {fileID: 212981421137908458}
   - component: {fileID: 61145037887519704}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (Visible)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135104178859828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.036405925, y: -4.269459, z: 0.0546875}
+  m_LocalPosition: {x: 0.036405925, y: 5.7705407, z: 0.0546875}
   m_LocalScale: {x: 24.228746, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,7 +49,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1135104178859828}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 50de2b4d271338b42926bf62475b1b62, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

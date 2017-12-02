@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   influenceRadius: 1.2
-  reflectPower: 50
+  reflectPower: 300
 --- !u!212 &212673328017056716
 SpriteRenderer:
   m_ObjectHideFlags: 1

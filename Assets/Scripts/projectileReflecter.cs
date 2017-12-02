@@ -37,7 +37,7 @@ public class projectileReflecter : MonoBehaviour
             rb2d.AddForce(reflectDirection * reflectPower);
 
             projectileRotator prota = projectile.GetComponent<projectileRotator>();
-            prota.FaceAwayFromDirection(transform);
+            prota.FaceAwayFromDirection(transform.position);
         }
     }
 }

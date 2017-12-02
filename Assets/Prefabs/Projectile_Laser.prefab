@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212467673258784934}
   - component: {fileID: 50103195614630222}
   - component: {fileID: 60124887569428364}
+  - component: {fileID: 114418537855030218}
   m_Layer: 10
   m_Name: Projectile_Laser
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1677199683398856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.4251733, y: 0.11696996, z: 0.33122823}
+  m_LocalPosition: {x: -6.79, y: 0.19, z: 0.33122823}
   m_LocalScale: {x: 3.7229505, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,11 +58,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 50de2b4d271338b42926bf62475b1b62, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &60124887569428364
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -92,6 +93,17 @@ PolygonCollider2D:
       - {x: 0.065954894, y: -0.05477109}
       - {x: 0.06595477, y: 0.049084276}
       - {x: 0.0016285429, y: 0.06954214}
+--- !u!114 &114418537855030218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1677199683398856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ff99e23e60469419b3906132c5dfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212467673258784934
 SpriteRenderer:
   m_ObjectHideFlags: 1
