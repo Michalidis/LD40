@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 1755153733831704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.66, y: 4.2, z: 0}
-  m_LocalScale: {x: 2.621983, y: 2.621983, z: 2.621983}
+  m_LocalScale: {x: 2.62198, y: 2.62198, z: 2.62198}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -49,9 +49,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755153733831704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b43562f67ce51498f685a585c3f4f9, type: 3}
+  m_Script: {fileID: 11500000, guid: cca20bd616199024bb2f8c8c1768350c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSpawn: 3.5
+  defaultSpawnTime: 20
+  ArrayOfEnemies:
+  - {fileID: 1215431149468286, guid: f7abc1a7a8cf233489cd228af07cdf76, type: 2}
+  difficulty: 1
 --- !u!212 &212915435695225916
 SpriteRenderer:
   m_ObjectHideFlags: 1

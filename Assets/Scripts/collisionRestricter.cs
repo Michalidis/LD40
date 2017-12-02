@@ -7,6 +7,7 @@ public class CollisionRestricter : MonoBehaviour
     void Start()
     {
         Physics2D.IgnoreLayerCollision(8, 9, true);     // Enemy Ships vs. Walls
+        Physics2D.IgnoreLayerCollision(8, 13, true);     // Enemy Ships vs. Projectile Destroyers
         Physics2D.IgnoreLayerCollision(10, 9, true);    // Enemy Projectiles vs. Enemies
         Physics2D.IgnoreLayerCollision(8, 10, true);    // Walls vs. Enemy Projectiles
         Physics2D.IgnoreLayerCollision(10, 10, true);   // Enemy Projectiles vs. Enemy Projectiles

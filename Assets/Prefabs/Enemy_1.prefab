@@ -103,6 +103,7 @@ MonoBehaviour:
   projectile: {fileID: 1677199683398856, guid: 15a5cf52d3924e14eba44e87374f2598, type: 2}
   shootingInterval: 1
   shootingPower: 250
+  shootingDirection: {x: -1, y: 0}
 --- !u!114 &114497272323748590
 MonoBehaviour:
   m_ObjectHideFlags: 1

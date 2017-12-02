@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212546179161903164}
   - component: {fileID: 61732947638718492}
   - component: {fileID: 114380478561946482}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Projectile Destroyer (Invisible)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1389780436912796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.59, y: 0.847, z: 0.0546875}
+  m_LocalPosition: {x: 12.59, y: 0.847, z: 0.0546875}
   m_LocalScale: {x: 1, y: 10.780789, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

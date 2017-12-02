@@ -26,7 +26,7 @@ public class ProjectileReflecter : MonoBehaviour
         Vector2 reflectionCenter = gameObject.transform.position;
 
         var projectiles = Physics2D.OverlapCircleAll(reflectionCenter, influenceRadius)
-            .Where(z => z.gameObject.layer == 10).ToArray();
+            .Where(z => z.gameObject.layer == 10 || z.gameObject.layer == 12).ToArray();
 
         foreach (var projectile in projectiles)
         {

@@ -10,7 +10,7 @@ public class ProjectileShooter : MonoBehaviour
     public float shootingPower;
     private float lastShotTime;
 
-    private Vector2 shootingDirection = new Vector2(-1, 0);
+    public Vector2 shootingDirection = new Vector2(-1, 0);
 
     // Use this for initialization
     void Start()
@@ -38,8 +38,13 @@ public class ProjectileShooter : MonoBehaviour
         _projectile.transform.position = transform.position;
         _projectile.GetComponent<Rigidbody2D>().AddForce(shootingDirection * shootingPower);
 
-        //projectile _projectileScript = _projectile.GetComponent<projectile>();
-        //_projectileScript.speed = gameObject.GetComponent<enemyMovement_1>().speed * 3;
-        //_projectileScript.movementDirection = new Vector2(-1, 0);
+        StartCoroutine(FixOrientation(_projectile));
+    }
+
+    IEnumerator FixOrientation(GameObject pr)
+    {
+        yield return new WaitForSeconds(0.02f);
+        if (pr != null)
+            pr.GetComponent<ProjectileRotator>().FaceVelocity();
     }
 }
