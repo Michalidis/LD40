@@ -40,4 +40,10 @@ public class projectileReflecter : MonoBehaviour
             prota.FaceAwayFromDirection(transform.position);
         }
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(gameObject.transform.position, influenceRadius);
+    }
 }
