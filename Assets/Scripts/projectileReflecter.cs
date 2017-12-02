@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class projectileReflecter : MonoBehaviour
+public class ProjectileReflecter : MonoBehaviour
 {
 
     public float influenceRadius;
@@ -36,7 +36,7 @@ public class projectileReflecter : MonoBehaviour
             rb2d.velocity = Vector2.zero;
             rb2d.AddForce(reflectDirection * reflectPower);
 
-            projectileRotator prota = projectile.GetComponent<projectileRotator>();
+            ProjectileRotator prota = projectile.GetComponent<ProjectileRotator>();
             prota.FaceAwayFromDirection(transform.position);
         }
     }

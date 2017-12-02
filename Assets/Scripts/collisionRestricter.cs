@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class collisionRestricter : MonoBehaviour
+public class CollisionRestricter : MonoBehaviour
 {
 
     // Use this for initialization

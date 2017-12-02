@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class projectileRotator : MonoBehaviour
+public class ProjectileRotator : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
     // Use this for initialization

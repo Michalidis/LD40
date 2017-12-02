@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectileShooter : MonoBehaviour
+public class ProjectileShooter : MonoBehaviour
 {
     public GameObject projectile;
 
