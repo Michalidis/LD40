@@ -411,6 +411,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4417192716255008, guid: ca576ad92be3d804e8e02defafa540ec, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 158.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca576ad92be3d804e8e02defafa540ec, type: 2}
   m_IsPrefabParent: 0
@@ -757,6 +761,10 @@ Prefab:
       propertyPath: m_Name
       value: Projectile Destroyer (Invisible) (Left)
       objectReference: {fileID: 0}
+    - target: {fileID: 4877202754380192, guid: aa2f6744472fbb4448c4c7038cdcb888, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 158.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa2f6744472fbb4448c4c7038cdcb888, type: 2}
   m_IsPrefabParent: 0
@@ -807,6 +815,10 @@ Prefab:
     - target: {fileID: 1389780436912796, guid: aa2f6744472fbb4448c4c7038cdcb888, type: 2}
       propertyPath: m_Name
       value: Projectile Destroyer (Invisible) (Right)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877202754380192, guid: aa2f6744472fbb4448c4c7038cdcb888, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 158.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa2f6744472fbb4448c4c7038cdcb888, type: 2}
