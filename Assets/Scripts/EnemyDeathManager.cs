@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 
-public class StarCatcher : MonoBehaviour {
+public class EnemyDeathManager : MonoBehaviour {
 
-    public StarEmitter emitter;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,10 +14,9 @@ public class StarCatcher : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 15)
+        if (collision.gameObject.layer == 12)
         {
-            emitter.count++;
-            emitter.stars.Enqueue(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }

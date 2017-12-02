@@ -28,7 +28,6 @@ public class StarEmitter : MonoBehaviour
             GameObject _star = Instantiate(star);
             _star.transform.localScale /= 4;
             stars.Enqueue(_star);
-            _star.GetComponent<Renderer>().enabled = false;
         }
 
         Vector3 t = high.transform.position;
@@ -51,7 +50,6 @@ public class StarEmitter : MonoBehaviour
                 y = Random.Range(low_y, high_y);
                 _star.transform.position = transform.position;
                 _star.transform.position += new Vector3(0f, y, 0f);
-                _star.GetComponent<Renderer>().enabled = true;
                 _star.GetComponent<Rigidbody2D>().AddForce(starSpeed * starDirection * Random.Range(0.5f, 3f));
                 timeToEmit = defaultEmitRate;
                 count--;
