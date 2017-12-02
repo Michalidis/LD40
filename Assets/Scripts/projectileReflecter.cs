@@ -5,20 +5,31 @@ using UnityEngine;
 
 public class ProjectileReflecter : MonoBehaviour
 {
-
+    private Animator animator;
     public float influenceRadius;
     public float reflectPower;
     // Use this for initialization
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (Input.GetKeyDown(KeyCode.Space) && !animator.GetCurrentAnimatorStateInfo(0).IsName("Attack State"))
+        {
+            GetComponent<Animator>().SetBool("isAttacking", true);
             ReflectProjectiles();
+            //StartCoroutine(DelayedAttack());
+        }
+    }
+
+    IEnumerator DelayedAttack()
+    {
+        yield return new WaitForSeconds(0.2f);
+        ReflectProjectiles();
     }
 
     void ReflectProjectiles()
