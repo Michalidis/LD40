@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSpawn: 0.3
-  defaultSpawnTime: 20
+  defaultSpawnTime: 12
   ArrayOfEnemies:
   - {fileID: 1215431149468286, guid: f7abc1a7a8cf233489cd228af07cdf76, type: 2}
   difficulty: 1
