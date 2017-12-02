@@ -36,7 +36,10 @@ public class EnemySpawner : MonoBehaviour
     {
         GameObject enemy = Instantiate(ArrayOfEnemies[Mathf.RoundToInt(Random.Range(0f, ArrayOfEnemies.Length - 1))]);
 
-        enemy.GetComponent<enemyMovement_1>().speed /= (1 / Mathf.Pow(difficulty, 0.15f));
+        enemyMovement_1 em = enemy.GetComponent<enemyMovement_1>();
+        em.speed *= Random.Range(0.7f, 2.05f);
+        em.speed /= (1 / Mathf.Pow(difficulty, 0.15f));
+
         ProjectileShooter[] ps = enemy.GetComponents<ProjectileShooter>();
 
         foreach (var _ps in ps)

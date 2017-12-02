@@ -996,16 +996,6 @@ Prefab:
       propertyPath: m_Name
       value: Star Emitter
       objectReference: {fileID: 0}
-    - target: {fileID: 114089339535381014, guid: 5d708c630265f7547963b55aeddbc4dc,
-        type: 2}
-      propertyPath: count
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114089339535381014, guid: 5d708c630265f7547963b55aeddbc4dc,
-        type: 2}
-      propertyPath: defaultEmitRate
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d708c630265f7547963b55aeddbc4dc, type: 2}
   m_IsPrefabParent: 0
