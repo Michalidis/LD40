@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61110319978525808}
   - component: {fileID: 50243298012663562}
   - component: {fileID: 114497272323748590}
+  - component: {fileID: 114372355161007794}
   m_Layer: 8
   m_Name: Enemy_1
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1215431149468286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.4, y: 0.94, z: 0}
+  m_LocalPosition: {x: 9.4, y: 0.82, z: 0}
   m_LocalScale: {x: 9.682263, y: 9.682263, z: 9.682263}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,6 +89,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1380834, y: 0.13321307}
   m_EdgeRadius: 0
+--- !u!114 &114372355161007794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215431149468286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a102e8ad4d657754082fa6fb3fea4bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1677199683398856, guid: 15a5cf52d3924e14eba44e87374f2598, type: 2}
+  shootingInterval: 1
+  shootingPower: 250
 --- !u!114 &114497272323748590
 MonoBehaviour:
   m_ObjectHideFlags: 1
