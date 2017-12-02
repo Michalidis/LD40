@@ -8,6 +8,9 @@ public class ProjectileReflecter : MonoBehaviour
     private Animator animator;
     public float influenceRadius;
     public float reflectPower;
+
+    public float timeBetweenAttacks;
+    public float timeLeftToAttack;
     // Use this for initialization
     void Start()
     {
@@ -17,19 +20,14 @@ public class ProjectileReflecter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeLeftToAttack -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Space) && !animator.GetCurrentAnimatorStateInfo(0).IsName("Attack State"))
+        if (Input.GetKeyDown(KeyCode.Space) && timeLeftToAttack <= 0)
         {
             GetComponent<Animator>().SetBool("isAttacking", true);
             ReflectProjectiles();
-            //StartCoroutine(DelayedAttack());
+            timeLeftToAttack = timeBetweenAttacks;
         }
-    }
-
-    IEnumerator DelayedAttack()
-    {
-        yield return new WaitForSeconds(0.2f);
-        ReflectProjectiles();
     }
 
     void ReflectProjectiles()
