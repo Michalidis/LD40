@@ -31,6 +31,7 @@ public class StarEmitter : MonoBehaviour
             _star.transform.localScale /= 4;
             _star.transform.parent = transform;
             _star.name = string.Format("Star {0}", i + 1);
+            _star.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
             stars.Enqueue(_star);
         }

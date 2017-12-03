@@ -15,14 +15,14 @@ public class CollisionRestricter : MonoBehaviour
         Physics2D.IgnoreLayerCollision(9, 12, true);    // Walls vs. Reflected Projectiles
         Physics2D.IgnoreLayerCollision(12, 12, true);   // Reflected Projectiles vs. Reflected Projectiles
 
-        Physics2D.IgnoreLayerCollision(15, 8, true);    // Star Emits vs. Enemies
-        Physics2D.IgnoreLayerCollision(15, 10, true);   // Star Emits vs. Enemy Projectiles
-        Physics2D.IgnoreLayerCollision(15, 12, true);   // Star Emits vs. Reflected Projectiles
-        Physics2D.IgnoreLayerCollision(15, 9, true);    // Star Emits vs. Invisible Walls
-        Physics2D.IgnoreLayerCollision(15, 13, true);   // Star Emits vs. Projectile Destroyers
         Physics2D.IgnoreLayerCollision(15, 0, true);    // Star Emits vs. Defaults
-        Physics2D.IgnoreLayerCollision(15, 11, true);    // Star Emits vs. Visible Walls
-        Physics2D.IgnoreLayerCollision(15, 15, true);   // Star Emits vs. Defaults
+        Physics2D.IgnoreLayerCollision(15, 8, true);    // Star Emits vs. Enemies
+        Physics2D.IgnoreLayerCollision(15, 9, true);    // Star Emits vs. Invisible Walls
+        Physics2D.IgnoreLayerCollision(15, 10, true);   // Star Emits vs. Enemy Projectiles
+        Physics2D.IgnoreLayerCollision(15, 11, true);   // Star Emits vs. Visible Walls
+        Physics2D.IgnoreLayerCollision(15, 12, true);   // Star Emits vs. Reflected Projectiles
+        Physics2D.IgnoreLayerCollision(15, 13, true);   // Star Emits vs. Projectile Destroyers
+        Physics2D.IgnoreLayerCollision(15, 15, true);   // Star Emits vs. Star Emits
 
         Physics2D.IgnoreLayerCollision(14, 8, true);    // Star Emitters vs. Enemies
         Physics2D.IgnoreLayerCollision(14, 10, true);   // Star Emitters vs. Enemy Projectiles
