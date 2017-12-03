@@ -162,8 +162,6 @@ MonoBehaviour:
   projectile: {fileID: 1936710491717652, guid: f263273ac6785894e8a7d892a42f376a, type: 2}
   shootingInterval: 1
   shootingPower: 250
-  projectileShootSounds: []
-  BoomBox: {fileID: 0}
   shootingDirection: {x: -1, y: 0}
 --- !u!198 &198343616871729850
 ParticleSystem:
