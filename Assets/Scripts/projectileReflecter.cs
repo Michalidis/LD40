@@ -11,6 +11,8 @@ public class ProjectileReflecter : MonoBehaviour
 
     public float timeBetweenAttacks;
     public float timeLeftToAttack;
+
+    public ParticleSystem OnReflect;
     // Use this for initialization
     void Start()
     {
@@ -50,6 +52,10 @@ public class ProjectileReflecter : MonoBehaviour
 
             ProjectileProperties prop = projectile.GetComponent<ProjectileProperties>();
             prop.ChangeToReflected();
+
+            ParticleSystem ps = Instantiate(OnReflect);
+            ps.transform.position = projectile.transform.position;
+            Destroy(ps, ps.main.startLifetime.constant);
         }
     }
 

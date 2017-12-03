@@ -1390,48 +1390,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4367374666418334, guid: 316cc19bd38fe894f977dfc0028f789f,
     type: 2}
   m_PrefabInternal: {fileID: 1695909618}
---- !u!1001 &1763967859
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1482435123}
-    m_Modifications:
-    - target: {fileID: 4328153415604236, guid: b9064c04cea04cf4ab913a70a791dfd7, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.7131556
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328153415604236, guid: b9064c04cea04cf4ab913a70a791dfd7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.06050568
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328153415604236, guid: b9064c04cea04cf4ab913a70a791dfd7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.036591727
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328153415604236, guid: b9064c04cea04cf4ab913a70a791dfd7, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328153415604236, guid: b9064c04cea04cf4ab913a70a791dfd7, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328153415604236, guid: b9064c04cea04cf4ab913a70a791dfd7, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328153415604236, guid: b9064c04cea04cf4ab913a70a791dfd7, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328153415604236, guid: b9064c04cea04cf4ab913a70a791dfd7, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b9064c04cea04cf4ab913a70a791dfd7, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &1837364540 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4557975523666740, guid: 3095e279e7133ad40afe9376864cea98,
