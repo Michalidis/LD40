@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198718988380190060}
   - component: {fileID: 199193733132806908}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: JetSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

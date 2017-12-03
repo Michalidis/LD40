@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyDeathManager : MonoBehaviour {
 
+    public ParticleSystem deathAnimation;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,15 +18,23 @@ public class EnemyDeathManager : MonoBehaviour {
     {
         if (collision.gameObject.layer == 12)
         {
-            StartCoroutine(SendToUndeworldAndKill());
+            Kill();
         }
     }
 
-    IEnumerator SendToUndeworldAndKill()
+    void Kill()
     {
+        PrepareAndPlanParticleDeath();
+
         GetComponent<ProjectileShooter>().enabled = false;
         transform.position *= 200;
-        yield return new WaitForSeconds(5);
-        Destroy(gameObject);
+        Destroy(gameObject, 5f);
+    }
+
+    void PrepareAndPlanParticleDeath()
+    {
+        ParticleSystem ps = Instantiate(deathAnimation);
+        ps.transform.position = transform.position;
+        Destroy(ps, 2f);
     }
 }
