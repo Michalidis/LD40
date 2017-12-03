@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1310293739403572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5221803, y: 0.20336986, z: 0}
+  m_LocalPosition: {x: -4.5287447, y: -2.8666306, z: 0}
   m_LocalScale: {x: 6.12017, y: 6.12017, z: 6.12017}
   m_Children: []
   m_Father: {fileID: 0}
@@ -162,6 +162,8 @@ MonoBehaviour:
   projectile: {fileID: 1936710491717652, guid: f263273ac6785894e8a7d892a42f376a, type: 2}
   shootingInterval: 1
   shootingPower: 250
+  projectileShootSounds: []
+  BoomBox: {fileID: 0}
   shootingDirection: {x: -1, y: 0}
 --- !u!198 &198343616871729850
 ParticleSystem:
@@ -223,7 +225,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 560018098
+  randomSeed: -1743288799
   InitialModule:
     serializedVersion: 3
     enabled: 1

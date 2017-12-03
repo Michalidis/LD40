@@ -7,16 +7,17 @@ public class ProjectileRotator : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
     public ParticleSystem onBounce;
+    private SoundPlayer BoomBox;
     // Use this for initialization
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        BoomBox = GameObject.Find("BoomBox").GetComponent<SoundPlayer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -26,7 +27,10 @@ public class ProjectileRotator : MonoBehaviour
         {
             FaceVelocity();
             if (colLayer == 11)
+            {
                 EmitParticle(collision.contacts, onBounce);
+                BoomBox.PlaySound(SoundPlayer.SoundType.BounceOffWalls, transform.position);
+            }
         }
         else
             Destroy(gameObject);
@@ -38,7 +42,7 @@ public class ProjectileRotator : MonoBehaviour
         {
             ParticleSystem ps = Instantiate(toEmit);
             ps.transform.position = pos.point;
-            Destroy(ps, 5f);
+            Destroy(ps.gameObject, 5f);
         }
     }
 

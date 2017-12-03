@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class EnemyDeathManager : MonoBehaviour
 {
-
+    private SoundPlayer BoomBox;
     public ParticleSystem deathAnimation;
     // Use this for initialization
     void Start()
     {
-
+        BoomBox = GameObject.Find("BoomBox").GetComponent<SoundPlayer>();
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class EnemyDeathManager : MonoBehaviour
         if (collision.gameObject.layer == 12)
         {
             Kill();
+            BoomBox.PlaySound(SoundPlayer.SoundType.Explosion, transform.position);
         }
     }
 

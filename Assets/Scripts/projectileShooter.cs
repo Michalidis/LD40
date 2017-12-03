@@ -10,12 +10,15 @@ public class ProjectileShooter : MonoBehaviour
     public float shootingPower;
     private float lastShotTime;
 
+    private SoundPlayer BoomBox;
+
     public Vector2 shootingDirection = new Vector2(-1, 0);
 
     // Use this for initialization
     void Start()
     {
         lastShotTime = shootingInterval;
+        BoomBox = GameObject.Find("BoomBox").GetComponent<SoundPlayer>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,8 @@ public class ProjectileShooter : MonoBehaviour
         GameObject _projectile = Instantiate(projectile);
         _projectile.transform.position = transform.position;
         _projectile.GetComponent<Rigidbody2D>().AddForce(shootingDirection * shootingPower);
+
+        BoomBox.PlaySound(SoundPlayer.SoundType.ProjectileShootSound, transform.position);
 
         StartCoroutine(FixOrientation(_projectile));
     }

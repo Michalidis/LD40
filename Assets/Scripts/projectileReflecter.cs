@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ProjectileReflecter : MonoBehaviour
 {
+    private SoundPlayer BoomBox;
     private Animator animator;
     public float influenceRadius;
     public float reflectPower;
@@ -17,6 +18,7 @@ public class ProjectileReflecter : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        BoomBox = GameObject.Find("BoomBox").GetComponent<SoundPlayer>();
     }
 
     // Update is called once per frame
@@ -56,6 +58,11 @@ public class ProjectileReflecter : MonoBehaviour
             ps.transform.position = projectile.transform.position;
             Destroy(ps.gameObject, 5f);
         }
+
+        if (projectiles.Length > 0)
+            BoomBox.PlaySound(SoundPlayer.SoundType.Deflect, transform.position);
+        else
+            BoomBox.PlaySound(SoundPlayer.SoundType.Swish, transform.position);
     }
 
     void OnDrawGizmos()
