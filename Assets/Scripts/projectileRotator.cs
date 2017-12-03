@@ -31,7 +31,7 @@ public class ProjectileRotator : MonoBehaviour
                 EmitParticle(collision.contacts, onBounce);
                 BoomBox.PlaySound(SoundPlayer.SoundType.BounceOffWalls, transform.position);
             }
-            Debug.Log(gameObject.GetComponent<Rigidbody2D>().velocity.magnitude);
+
             if (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 2f)
                 Destroy(gameObject);
         }
