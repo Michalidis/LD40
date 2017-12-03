@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProjectileProperties : MonoBehaviour
 {
 
+    public TrailRenderer trailren;
     public Animator ani;
     // Use this for initialization
     void Start()
@@ -19,8 +20,17 @@ public class ProjectileProperties : MonoBehaviour
 
     public void ChangeToReflected()
     {
-        gameObject.layer = 12;
-        gameObject.GetComponent<Animator>().runtimeAnimatorController = ani.runtimeAnimatorController;
+        int prevLayer = gameObject.layer;
+        if (prevLayer != 12)
+        {
+            gameObject.layer = 12;
+            gameObject.GetComponent<Animator>().runtimeAnimatorController = ani.runtimeAnimatorController;
+            foreach (var tr in gameObject.GetComponentsInChildren<TrailRenderer>())
+            {
+                tr.enabled = !tr.enabled;
+            }
+        }
+
     }
 
 }
