@@ -29,6 +29,9 @@ public class StarEmitter : MonoBehaviour
 
             _star.transform.position = high.transform.position;
             _star.transform.localScale /= 4;
+            _star.transform.parent = transform;
+            _star.name = string.Format("Star {0}", i + 1);
+
             stars.Enqueue(_star);
         }
 
