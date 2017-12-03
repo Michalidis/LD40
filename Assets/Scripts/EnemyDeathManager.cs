@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class EnemyDeathManager : MonoBehaviour {
 
@@ -16,7 +17,15 @@ public class EnemyDeathManager : MonoBehaviour {
     {
         if (collision.gameObject.layer == 12)
         {
-            Destroy(gameObject);
+            StartCoroutine(SendToUndeworldAndKill());
         }
+    }
+
+    IEnumerator SendToUndeworldAndKill()
+    {
+        GetComponent<ProjectileShooter>().enabled = false;
+        transform.position *= 200;
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
     }
 }
