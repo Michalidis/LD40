@@ -8,7 +8,6 @@ public class MusicPlayer : MonoBehaviour
     public GameObject MusicTracks_Container;
     private AudioSource[] MusicTracks;
 
-
     // Use this for initialization
     void Start()
     {
@@ -24,26 +23,30 @@ public class MusicPlayer : MonoBehaviour
 
     IEnumerator PlayMusic()
     {
-        AudioSource[] unplayedTracks = new AudioSource[MusicTracks.Length];
-        MusicTracks.CopyTo(unplayedTracks, 0);
+        List<AudioSource> unplayedTracks = new List<AudioSource>();
+        foreach (var track in MusicTracks)
+            unplayedTracks.Add(track);
 
         yield return new WaitForSeconds(0.3f);
         while (true)
         {
-            if (unplayedTracks.Length > 0)
+            if (unplayedTracks.Count > 0)
             {
-                AudioSource track = unplayedTracks[GetRandomIndex(unplayedTracks)];
+                int trackIndex = GetRandomIndex(unplayedTracks);
+                AudioSource track = unplayedTracks[trackIndex];
+                unplayedTracks.RemoveAt(trackIndex);
                 track.Play();
                 yield return new WaitForSeconds(track.clip.length);
             }
             else
-                MusicTracks.CopyTo(unplayedTracks, 0);
+                foreach (var track in MusicTracks)
+                    unplayedTracks.Add(track);
         }
     }
 
-    private int GetRandomIndex(AudioSource[] collection)
+    private int GetRandomIndex(List<AudioSource> collection)
     {
-        int rnd_index = Random.Range(0, collection.Length);
+        int rnd_index = Random.Range(0, collection.Count);
         return rnd_index;
     }
 
