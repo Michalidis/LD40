@@ -54,7 +54,7 @@ public class ProjectileReflecter : MonoBehaviour
 
             ParticleSystem ps = Instantiate(OnReflect);
             ps.transform.position = projectile.transform.position;
-            Destroy(ps.gameObject, ps.main.startLifetime.constant);
+            Destroy(ps.gameObject, 5f);
         }
     }
 
