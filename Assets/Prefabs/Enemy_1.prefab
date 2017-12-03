@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c85a1775541b0d429896a6506675556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathAnimation: {fileID: 198970247897761790, guid: 462dd40245d927745bc0737169171062,
+    type: 2}
 --- !u!114 &114376822547392560
 MonoBehaviour:
   m_ObjectHideFlags: 1
