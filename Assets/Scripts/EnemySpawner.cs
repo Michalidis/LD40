@@ -28,7 +28,8 @@ public class EnemySpawner : MonoBehaviour
                 difficulty = difficulty + 1;
                 InstantiateEnemy();
             }
-            defaultSpawnTime -= Mathf.Pow(0.2f, 0.10f);
+            defaultSpawnTime -= Mathf.Pow(0.2f, 0.10f)/difficulty;
+            defaultSpawnTime = Mathf.Max(defaultSpawnTime, 5f);
             nextSpawn = defaultSpawnTime;
         }
     }
@@ -39,7 +40,7 @@ public class EnemySpawner : MonoBehaviour
 
         enemyMovement_1 em = enemy.GetComponent<enemyMovement_1>();
         em.speed *= Random.Range(0.7f, 2.05f);
-        em.speed /= (1 / Mathf.Pow(difficulty, 0.15f));
+        em.speed /= (1 / Mathf.Pow(difficulty, 0.35f));
 
         ProjectileShooter[] ps = enemy.GetComponents<ProjectileShooter>();
 
