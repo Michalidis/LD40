@@ -27,12 +27,11 @@ public class ProjectileReflecter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && timeLeftToAttack <= 0)
         {
             GetComponent<Animator>().SetBool("isAttacking", true);
-            ReflectProjectiles();
             timeLeftToAttack = timeBetweenAttacks;
         }
     }
 
-    void ReflectProjectiles()
+    public void ReflectProjectiles()
     {
         Vector2 reflectionCenter = gameObject.transform.position;
 
