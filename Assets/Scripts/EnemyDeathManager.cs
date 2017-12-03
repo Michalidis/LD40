@@ -35,6 +35,6 @@ public class EnemyDeathManager : MonoBehaviour {
     {
         ParticleSystem ps = Instantiate(deathAnimation);
         ps.transform.position = transform.position;
-        Destroy(ps, 2f);
+        Destroy(ps.gameObject, ps.main.startLifetime.constant);
     }
 }
