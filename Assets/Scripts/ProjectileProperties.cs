@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ProjectileProperties : MonoBehaviour
 {
-
-    public TrailRenderer trailren;
     public Animator ani;
     // Use this for initialization
     void Start()

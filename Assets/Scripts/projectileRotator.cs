@@ -6,6 +6,7 @@
 public class ProjectileRotator : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
+    public ParticleSystem onBounce;
     // Use this for initialization
     void Start()
     {
@@ -22,11 +23,24 @@ public class ProjectileRotator : MonoBehaviour
     {
         int colLayer = collision.gameObject.layer;
         if (colLayer == 10 || colLayer == 11 || colLayer == 12)
+        {
             FaceVelocity();
+            if (colLayer == 11)
+                EmitParticle(collision.contacts, onBounce);
+        }
         else
             Destroy(gameObject);
     }
 
+    void EmitParticle(ContactPoint2D[] targetPositions, ParticleSystem toEmit)
+    {
+        foreach (var pos in targetPositions)
+        {
+            ParticleSystem ps = Instantiate(toEmit);
+            ps.transform.position = pos.point;
+            Destroy(ps, 5f);
+        }
+    }
 
     float magicConstant = 10000f;
 
