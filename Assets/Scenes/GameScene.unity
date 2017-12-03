@@ -988,6 +988,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1807979552922220, guid: 5d708c630265f7547963b55aeddbc4dc, type: 2}
+      propertyPath: m_Name
+      value: Star Emitter
+      objectReference: {fileID: 0}
     - target: {fileID: 114089339535381014, guid: 5d708c630265f7547963b55aeddbc4dc,
         type: 2}
       propertyPath: high
@@ -998,10 +1002,6 @@ Prefab:
       propertyPath: low
       value: 
       objectReference: {fileID: 1382219066}
-    - target: {fileID: 1807979552922220, guid: 5d708c630265f7547963b55aeddbc4dc, type: 2}
-      propertyPath: m_Name
-      value: Star Emitter
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d708c630265f7547963b55aeddbc4dc, type: 2}
   m_IsPrefabParent: 0

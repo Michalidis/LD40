@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ff99e23e60469419b3906132c5dfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onBounce: {fileID: 198894979749665756, guid: b8312953099862b4abbb93cadc6fbdad, type: 2}
 --- !u!114 &114816602127925968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,7 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c3fd90bed3c3e40999edd9d6a178ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailren: {fileID: 0}
   ani: {fileID: 95850656831534276}
 --- !u!212 &212320303280971782
 SpriteRenderer:
