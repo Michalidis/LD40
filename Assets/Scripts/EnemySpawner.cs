@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
 
     public float nextSpawn;
-    public float defaultSpawnTime = 20f;
+    public float defaultSpawnTime;
     public GameObject[] ArrayOfEnemies;
 
 
@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
         nextSpawn -= Time.deltaTime;
         if (nextSpawn <= 0)
         {
-            nextSpawn = defaultSpawnTime / Mathf.Pow(difficulty, 0.42f);
+            nextSpawn = defaultSpawnTime / Mathf.Pow(difficulty, 0.67f);
             if (Random.Range(0f, 1f) > Mathf.Min((1 / Mathf.Pow(difficulty, 0.32f)), 0.7f))
             {
                 difficulty = difficulty + 1;
@@ -44,8 +44,8 @@ public class EnemySpawner : MonoBehaviour
 
         foreach (var _ps in ps)
         {
-            _ps.shootingInterval *= (1 / Mathf.Pow(difficulty, 0.25f));
-            _ps.shootingPower /= (1 / Mathf.Pow(difficulty, 0.105f));
+            _ps.shootingInterval *= (1 / Mathf.Pow(difficulty, 0.75f));
+            _ps.shootingPower /= (1 / Mathf.Pow(difficulty, 0.68105f));
         }
 
         enemy.transform.position = transform.position;
