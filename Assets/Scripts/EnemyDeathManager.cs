@@ -30,7 +30,8 @@ public class EnemyDeathManager : MonoBehaviour
     {
         PrepareAndPlanParticleDeath();
 
-        GetComponent<ProjectileShooter>().enabled = false;
+        foreach (var ps in GetComponents<ProjectileShooter>())
+            ps.enabled = false;
         transform.position *= 200;
         Destroy(gameObject, 5f);
     }

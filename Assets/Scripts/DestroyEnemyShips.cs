@@ -21,7 +21,8 @@ public class DestroyEnemyShips : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            collision.gameObject.GetComponent<ProjectileShooter>().enabled = false;
+            foreach (var ps in collision.gameObject.GetComponents<ProjectileShooter>())
+                ps.enabled = false;
             collision.gameObject.transform.position *= 200;
             Destroy(collision.gameObject, 5f);
         }
