@@ -23,12 +23,13 @@ public class EnemySpawner : MonoBehaviour
         nextSpawn -= Time.deltaTime;
         if (nextSpawn <= 0)
         {
-            nextSpawn = defaultSpawnTime / Mathf.Pow(difficulty, 0.67f);
             if (Random.Range(0f, 1f) > Mathf.Min((1 / Mathf.Pow(difficulty, 0.32f)), 0.7f))
             {
                 difficulty = difficulty + 1;
                 InstantiateEnemy();
             }
+            defaultSpawnTime -= Mathf.Pow(0.2f, 0.10f);
+            nextSpawn = defaultSpawnTime;
         }
     }
 
@@ -44,8 +45,8 @@ public class EnemySpawner : MonoBehaviour
 
         foreach (var _ps in ps)
         {
-            _ps.shootingInterval *= (1 / Mathf.Pow(difficulty, 0.75f));
-            _ps.shootingPower /= (1 / Mathf.Pow(difficulty, 0.68105f));
+            _ps.shootingInterval *= (1 / Mathf.Pow(difficulty, 0.095f));
+            _ps.shootingPower /= (1 / Mathf.Pow(difficulty, 0.08105f));
         }
 
         enemy.transform.position = transform.position;
