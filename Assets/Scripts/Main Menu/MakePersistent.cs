@@ -2,15 +2,18 @@
 
 public class MakePersistent : MonoBehaviour
 {
+    private string defaultName = "IndestructibleInfo";
     // Use this for initialization
     void Start()
     {
-        GameObject[] existingInfo = GameObject.FindGameObjectsWithTag("GameController");
-        if (existingInfo.Length == 2)
+        gameObject.name = defaultName + "_Started";
+        GameObject existingInfo = GameObject.Find(defaultName);
+        if (existingInfo != null)
         {
             GameObject.Find("SinglePlayer").GetComponent<CanvasToggler>().Toggle();
             return;
         }
+        gameObject.name = defaultName;
         DontDestroyOnLoad(gameObject);
     }
 

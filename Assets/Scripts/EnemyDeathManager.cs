@@ -4,11 +4,13 @@ using UnityEngine;
 public class EnemyDeathManager : MonoBehaviour
 {
     private SoundPlayer BoomBox;
+    private PersistentInfoManager manager;
     public ParticleSystem deathAnimation;
     // Use this for initialization
     void Start()
     {
         BoomBox = GameObject.Find("BoomBox").GetComponent<SoundPlayer>();
+        manager = GameObject.Find("StatisticsManagement").GetComponent<PersistentInfoManager>();
     }
 
     // Update is called once per frame
@@ -26,9 +28,12 @@ public class EnemyDeathManager : MonoBehaviour
         }
     }
 
+
     void Kill()
     {
         PrepareAndPlanParticleDeath();
+
+        manager.EnemyKillCount_Current++;
 
         foreach (var ps in GetComponents<ProjectileShooter>())
             ps.enabled = false;

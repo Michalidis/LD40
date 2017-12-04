@@ -16,7 +16,7 @@ public class ProjectileProperties : MonoBehaviour
 
     }
 
-    public void ChangeToReflected()
+    public void ChangeToDeflected()
     {
         int prevLayer = gameObject.layer;
         if (prevLayer != 12)

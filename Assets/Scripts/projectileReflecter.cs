@@ -33,6 +33,8 @@ public class ProjectileReflecter : MonoBehaviour
         }
     }
 
+    public PersistentInfoManager Manager;
+
     public void ReflectProjectiles()
     {
         Vector2 reflectionCenter = gameObject.transform.position;
@@ -52,12 +54,14 @@ public class ProjectileReflecter : MonoBehaviour
             prota.FaceAwayFromDirection(transform.position);
 
             ProjectileProperties prop = projectile.GetComponent<ProjectileProperties>();
-            prop.ChangeToReflected();
+            prop.ChangeToDeflected();
 
             ParticleSystem ps = Instantiate(OnReflect);
             ps.transform.position = projectile.transform.position;
             Destroy(ps.gameObject, 5f);
         }
+
+        Manager.DeflectedProjectilesCount_Current += projectiles.Length;
 
         if (projectiles.Length > 0)
             BoomBox.PlaySound(SoundPlayer.SoundType.Deflect, transform.position);

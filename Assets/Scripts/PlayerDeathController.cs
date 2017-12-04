@@ -25,6 +25,10 @@ public class PlayerDeathController : MonoBehaviour
         StartCoroutine(DelayParticleStopAndLoadMenu());
     }
 
+    void UpdateStatistics()
+    {
+        GameObject.Find("StatisticsManagement").GetComponent<PersistentInfoManager>().UpdatePersistentStatistics();
+    }
     void DisableComponents()
     {
         GetComponent<PlayerMovement>().enabled = false;
@@ -38,6 +42,7 @@ public class PlayerDeathController : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         GetComponentInChildren<ParticleSystem>().Stop();
         yield return new WaitForSeconds(1.7f);
+        UpdateStatistics();
         GetComponent<SceneLoader>().LoadMenuScene();
     }
 }
