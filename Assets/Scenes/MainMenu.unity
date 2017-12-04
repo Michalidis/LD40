@@ -2578,7 +2578,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: 'NEW ABILITY: Your Projectiles can now pierce through enemy ships. Unlocked
+      value: 'NEW ABILITY: Your Projectiles can now bounce off enemy ships. Unlocked
         by increasing your Deflecting Power by at least 25%.'
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
@@ -4942,6 +4942,9 @@ MonoBehaviour:
   deflect_radius: 0
   movement_speed: 0
   enemy_spawn_speed: 0
+  projectile_pierce_count: 0
+  projectile_split_chance: 0
+  projectile_split_count: 0
   Enemy2Unlocked: 0
   Enemy3Unlocked: 0
   Enemy4Unlocked: 0
@@ -5349,7 +5352,7 @@ Prefab:
         type: 2}
       propertyPath: ToolTipText
       value: 'NEW ABILITY: You have a chance to split the enemy projectiles. Unlocked
-        by being able to pierce through at least 2 enemy ships.'
+        by being able to bounce off of at least 2 enemy ships.'
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}

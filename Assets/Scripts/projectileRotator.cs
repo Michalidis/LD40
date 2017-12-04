@@ -8,11 +8,17 @@ public class ProjectileRotator : MonoBehaviour
     private Rigidbody2D rigidBody;
     public ParticleSystem onBounce;
     private SoundPlayer BoomBox;
+
+    private int piercesLeft;
     // Use this for initialization
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         BoomBox = GameObject.Find("BoomBox").GetComponent<SoundPlayer>();
+
+        Upgrades ups = GameObject.Find("Upgrades").GetComponent<Upgrades>();
+
+        piercesLeft = (int)ups.projectile_pierce_count;
     }
 
     // Update is called once per frame
@@ -36,7 +42,16 @@ public class ProjectileRotator : MonoBehaviour
                 Destroy(gameObject);
         }
         else
-            Destroy(gameObject);
+        {
+            if (piercesLeft > 0 && colLayer != 0)
+            {
+                piercesLeft--;
+                rigidBody.AddForce(rigidBody.velocity * 500);
+                FaceVelocity();
+            }
+            else
+                Destroy(gameObject);
+        }
     }
 
     void EmitParticle(ContactPoint2D[] targetPositions, ParticleSystem toEmit)

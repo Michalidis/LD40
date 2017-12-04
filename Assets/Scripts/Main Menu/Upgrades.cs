@@ -10,12 +10,18 @@ public class Upgrades : MonoBehaviour
     private UpgradeToolTipHolder _deflect_radius;
     private UpgradeToolTipHolder _movement_speed;
     private UpgradeToolTipHolder _enemy_spawn_speed;
+    private UpgradeToolTipHolder _projectile_pierce_count;
+    private UpgradeToolTipHolder _projectile_split_chance;
+    private UpgradeToolTipHolder _projectile_split_count;
 
     public float deflect_power;
     public float deflect_rate;
     public float deflect_radius;
     public float movement_speed;
     public float enemy_spawn_speed;
+    public float projectile_pierce_count;
+    public float projectile_split_chance;
+    public float projectile_split_count;
 
     public bool Enemy2Unlocked = false;
     public bool Enemy3Unlocked = false;
@@ -48,7 +54,9 @@ public class Upgrades : MonoBehaviour
             FindAndAssignProperToolTips("DeflectRate", _deflect_rate);
             FindAndAssignProperToolTips("FlySpeed", _movement_speed);
             FindAndAssignProperToolTips("EnemySpawnRate", _enemy_spawn_speed);
-
+            FindAndAssignProperToolTips("PiercingProjectilesCount", _projectile_pierce_count);
+            FindAndAssignProperToolTips("SplitChance", _projectile_split_chance);
+            FindAndAssignProperToolTips("SplitCount", _projectile_split_count);
         }
         ShipUnlockCheck();
     }
@@ -62,12 +70,18 @@ public class Upgrades : MonoBehaviour
         globalUpgrades._deflect_rate = GetToolTip("DeflectRate");
         globalUpgrades._movement_speed = GetToolTip("FlySpeed");
         globalUpgrades._enemy_spawn_speed = GetToolTip("EnemySpawnRate");
+        globalUpgrades._projectile_pierce_count = GetToolTip("PiercingProjectilesCount");
+        globalUpgrades._projectile_split_chance = GetToolTip("SplitChance");
+        globalUpgrades._projectile_split_count = GetToolTip("SplitCount");
 
         deflect_power = _deflect_power.CurrentBonus;
         deflect_radius = _deflect_radius.CurrentBonus;
         deflect_rate = _deflect_rate.CurrentBonus;
         movement_speed = _movement_speed.CurrentBonus;
         enemy_spawn_speed = _enemy_spawn_speed.CurrentBonus;
+        projectile_pierce_count = _projectile_pierce_count.CurrentBonus;
+        projectile_split_chance = _projectile_split_chance.CurrentBonus;
+        projectile_split_count = _projectile_split_count.CurrentBonus;
     }
 
     void ShipUnlockCheck()
