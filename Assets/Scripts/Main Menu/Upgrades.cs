@@ -9,11 +9,13 @@ public class Upgrades : MonoBehaviour
     private UpgradeToolTipHolder _deflect_rate;
     private UpgradeToolTipHolder _deflect_radius;
     private UpgradeToolTipHolder _movement_speed;
+    private UpgradeToolTipHolder _enemy_spawn_speed;
 
     public float deflect_power;
     public float deflect_rate;
     public float deflect_radius;
     public float movement_speed;
+    public float enemy_spawn_speed;
 
     // Use this for initialization
     void Start()
@@ -37,6 +39,7 @@ public class Upgrades : MonoBehaviour
             FindAndAssignProperToolTips("DeflectRadius", _deflect_radius);
             FindAndAssignProperToolTips("DeflectRate", _deflect_rate);
             FindAndAssignProperToolTips("FlySpeed", _movement_speed);
+            FindAndAssignProperToolTips("EnemySpawnRate", _enemy_spawn_speed);
         }
     }
 
@@ -48,11 +51,13 @@ public class Upgrades : MonoBehaviour
         globalUpgrades._deflect_radius = GetToolTip("DeflectRadius");
         globalUpgrades._deflect_rate = GetToolTip("DeflectRate");
         globalUpgrades._movement_speed = GetToolTip("FlySpeed");
+        globalUpgrades._enemy_spawn_speed = GetToolTip("EnemySpawnRate");
 
         deflect_power = _deflect_power.CurrentBonus;
         deflect_radius = _deflect_radius.CurrentBonus;
         deflect_rate = _deflect_rate.CurrentBonus;
         movement_speed = _movement_speed.CurrentBonus;
+        enemy_spawn_speed = _enemy_spawn_speed.CurrentBonus;
     }
 
     private void FindAndAssignProperToolTips(string gobName, UpgradeToolTipHolder toolTip)

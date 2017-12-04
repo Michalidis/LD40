@@ -22,8 +22,12 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     void Start()
     {
         textTarget = GameObject.Find("ToolTip").GetComponent<Text>();
-        transform.GetComponent<Button>().onClick.AddListener(Upgrade);
-        transform.GetComponent<Button>().onClick.AddListener(GameObject.Find("IndestructibleInfo").GetComponentInChildren<Statistics>().RewriteStatistics_MainMenuONLY);
+
+        if (UpgradeCost > 0)
+        {
+            transform.GetComponent<Button>().onClick.AddListener(Upgrade);
+            transform.GetComponent<Button>().onClick.AddListener(GameObject.Find("IndestructibleInfo").GetComponentInChildren<Statistics>().RewriteStatistics_MainMenuONLY);
+        }
     }
 
     // Update is called once per frame
@@ -44,11 +48,19 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     void PrintToolTip()
     {
-        textTarget.text = "Current Level: " + Level + "\n"
-            + ToolTipText
-            + "\nUpgrade Cost: " + UpgradeCost + " Metal Gears."
-            + "\nCurrent Bonus: " + CurrentBonus * 100 + "%."
-            + "\nNext Bonus: " + NextBonus * 100 + "%.";
+        if (UpgradeCost > 0)
+            textTarget.text = "Current Level: " + Level + "\n"
+                + ToolTipText
+                + "\nUpgrade Cost: " + UpgradeCost + " Metal Gears."
+                + "\nCurrent Bonus: " + CurrentBonus * 100 + "%."
+                + "\nNext Bonus: " + NextBonus * 100 + "%.";
+        else
+            textTarget.text = "Current Level: " + Level + "\n"
+                + ToolTipText
+                + "\nCurrent Bonus: " + CurrentBonus * 100 + "%."
+                + "\nNext Bonus: " + NextBonus * 100 + "%."
+                + "\nCannot Be Purchased!";
+
     }
 
     public void Upgrade()

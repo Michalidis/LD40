@@ -13,7 +13,8 @@ public class EnemySpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        defaultSpawnTime *=
+            1 - GameObject.Find("Upgrades").GetComponent<Upgrades>().enemy_spawn_speed;
     }
 
     public int difficulty;
@@ -28,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
                 difficulty = difficulty + 1;
                 InstantiateEnemy();
             }
-            defaultSpawnTime -= Mathf.Pow(0.2f, 0.10f)/difficulty;
+            defaultSpawnTime -= Mathf.Pow(0.2f, 0.10f) / difficulty;
             defaultSpawnTime = Mathf.Max(defaultSpawnTime, 5f);
             nextSpawn = defaultSpawnTime;
         }
