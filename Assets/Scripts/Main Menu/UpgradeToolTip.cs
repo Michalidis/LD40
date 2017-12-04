@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-
     public string ToolTipText;
 
     public float CurrentBonus;
@@ -23,8 +22,8 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     void Start()
     {
         textTarget = GameObject.Find("ToolTip").GetComponent<Text>();
-
         transform.GetComponent<Button>().onClick.AddListener(Upgrade);
+        transform.GetComponent<Button>().onClick.AddListener(GameObject.Find("IndestructibleInfo").GetComponentInChildren<Statistics>().RewriteStatistics_MainMenuONLY);
     }
 
     // Update is called once per frame
@@ -45,7 +44,7 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     void PrintToolTip()
     {
-        textTarget.text = "Current Level: " + Level
+        textTarget.text = "Current Level: " + Level + "\n"
             + ToolTipText
             + "\nUpgrade Cost: " + UpgradeCost + " Metal Gears."
             + "\nCurrent Bonus: " + CurrentBonus * 100 + "%."

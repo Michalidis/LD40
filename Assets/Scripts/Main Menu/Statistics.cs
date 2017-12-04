@@ -47,7 +47,8 @@ public class Statistics : MonoBehaviour
 
     public void ResetStatistics_MainMenuONLY()
     {
-        if (SceneManager.GetActiveScene().name == "MainMenu")
+        string SceneName = SceneManager.GetActiveScene().name;
+        if (SceneName == "MainMenu")
         {
             GameObject infoHolder = GameObject.Find("IndestructibleInfo");
             Statistics globalStats = infoHolder.GetComponentInChildren<Statistics>();
@@ -62,7 +63,7 @@ public class Statistics : MonoBehaviour
 
             globalStats.RewriteStatistics_MainMenuONLY();
 
-            upgrades.Reset();
+            SceneManager.LoadScene(SceneName);
         }
     }
 }

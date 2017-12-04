@@ -11,6 +11,7 @@ public class MakePersistent : MonoBehaviour
         if (existingInfo != null)
         {
             GameObject.Find("SinglePlayer").GetComponent<CanvasToggler>().Toggle();
+            Destroy(gameObject);
             return;
         }
         gameObject.name = defaultName;
