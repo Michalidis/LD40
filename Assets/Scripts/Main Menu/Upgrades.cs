@@ -21,6 +21,10 @@ public class Upgrades : MonoBehaviour
     public bool Enemy3Unlocked = false;
     public bool Enemy4Unlocked = false;
 
+    public bool PiercingAbilityUnlocked = false;
+    public bool SplitAbilityUnlocked = false;
+    public bool DeflectingProjectileAbilityUnlocked = false;
+
     // Use this for initialization
     void Start()
     {

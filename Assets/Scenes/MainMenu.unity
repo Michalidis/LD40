@@ -494,6 +494,151 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6cd01797de47c41b320eb7c32e0df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &209169161
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1114971722}
+    m_Modifications:
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929408837212424, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
+      propertyPath: m_Name
+      value: PiercingProjectilesCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: ToolTipText
+      value: Increases the Power at which you deflect projectiles.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: NextBonus
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: NextCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: BonusIncreasePerUpgrade
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: UpgradeCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: CostIncreasePerUpgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220642065911456, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1c1fb16d2ec6d0d47a79eb5b0281a975,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &209169162 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+    type: 2}
+  m_PrefabInternal: {fileID: 209169161}
 --- !u!1 &227065552
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +1107,7 @@ Prefab:
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 300
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -1002,7 +1147,7 @@ Prefab:
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -1148,7 +1293,7 @@ Prefab:
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 350
+      value: 380
       objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -1188,7 +1333,7 @@ Prefab:
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 350
+      value: 380
       objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -1954,7 +2099,7 @@ Prefab:
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 200
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -1994,7 +2139,7 @@ Prefab:
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 200
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -2370,8 +2515,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: Reinforcements have arrived! Unlocked by surviving for at least 3 minutes
-        in single run.
+      value: Your Projectiles can now pierce through enemy ships.
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -2756,6 +2900,151 @@ Transform:
   m_Father: {fileID: 438532338}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1084533355
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1114971722}
+    m_Modifications:
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929408837212424, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
+      propertyPath: m_Name
+      value: SplitCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: ToolTipText
+      value: Increases the Power at which you deflect projectiles.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: NextBonus
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: NextCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: BonusIncreasePerUpgrade
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: UpgradeCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: CostIncreasePerUpgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220642065911456, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c088bef8f5514214f8f036ee11cc478f,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1084533356 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+    type: 2}
+  m_PrefabInternal: {fileID: 1084533355}
 --- !u!1 &1104416168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,6 +3155,9 @@ RectTransform:
   - {fileID: 913772405}
   - {fileID: 2007431225}
   - {fileID: 1672020147}
+  - {fileID: 209169162}
+  - {fileID: 1338212434}
+  - {fileID: 1084533356}
   m_Father: {fileID: 31601932}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3173,6 +3465,151 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296654683}
+--- !u!1001 &1338212433
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1114971722}
+    m_Modifications:
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929408837212424, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
+      propertyPath: m_Name
+      value: SplitChance
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: ToolTipText
+      value: Increases the Power at which you deflect projectiles.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: NextBonus
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: NextCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: BonusIncreasePerUpgrade
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: UpgradeCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: CostIncreasePerUpgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220642065911456, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ec2418eec5c7f7488c1ee1cadbfb84f,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1338212434 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
+    type: 2}
+  m_PrefabInternal: {fileID: 1338212433}
 --- !u!1 &1389352203
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,8 +4573,8 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: Reinforcements have arrived! Unlocked by surviving for at least 3 minutes
-        in single run.
+      value: Enemy Projectiles hit by your projectiles will become your projectiles
+        as well.
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -4399,6 +4836,9 @@ MonoBehaviour:
   Enemy2Unlocked: 0
   Enemy3Unlocked: 0
   Enemy4Unlocked: 0
+  PiercingAbilityUnlocked: 0
+  SplitAbilityUnlocked: 0
+  DeflectingProjectileAbilityUnlocked: 0
 --- !u!1 &1949984807
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,7 +4923,7 @@ Prefab:
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 250
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -4523,7 +4963,7 @@ Prefab:
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 250
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -4794,8 +5234,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: Reinforcements have arrived! Unlocked by surviving for at least 3 minutes
-        in single run.
+      value: You have a chance to split the enemy projectiles.
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
