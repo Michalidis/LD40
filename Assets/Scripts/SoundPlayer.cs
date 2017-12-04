@@ -12,12 +12,14 @@ public class SoundPlayer : MonoBehaviour
     public GameObject Deflect_Container;
     public GameObject Bounce_Container;
     public GameObject Swish_Container;
+    public GameObject PlayerDeaths_Container;
 
     private AudioSource[] ProjectileShootingSounds;
     private AudioSource[] Explosions;
     private AudioSource[] Deflects;
     private AudioSource[] Bounces;
     private AudioSource[] Swishes;
+    private AudioSource[] PlayerDeath;
     // Use this for initialization
     void Start()
     {
@@ -26,6 +28,7 @@ public class SoundPlayer : MonoBehaviour
         Deflects = Deflect_Container.GetComponents<AudioSource>();
         Bounces = Bounce_Container.GetComponents<AudioSource>();
         Swishes = Swish_Container.GetComponents<AudioSource>();
+        PlayerDeath = PlayerDeaths_Container.GetComponents<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,6 +56,9 @@ public class SoundPlayer : MonoBehaviour
             case SoundType.Swish:
                 Play(Swishes);
                 break;
+            case SoundType.PlayerDeath:
+                Play(PlayerDeath);
+                break;
             default:
                 break;
         }
@@ -69,6 +75,7 @@ public class SoundPlayer : MonoBehaviour
         Explosion,
         Deflect,
         BounceOffWalls,
-        Swish
+        Swish,
+        PlayerDeath
     }
 }

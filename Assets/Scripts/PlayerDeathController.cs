@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class PlayerDeathController : MonoBehaviour
 {
-
+    private SoundPlayer BoomBox;
     public ParticleSystem DeathParticleSystem;
     // Use this for initialization
     void Start()
     {
+        BoomBox = GameObject.Find("BoomBox").GetComponent<SoundPlayer>();
         DeathParticleSystem.Stop();
     }
 
@@ -19,10 +20,14 @@ public class PlayerDeathController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        GetComponent<Animator>().SetBool("isDead", true);
-        DeathParticleSystem.Play();
-        DisableComponents();
-        StartCoroutine(DelayParticleStopAndLoadMenu());
+        if (collision.gameObject.layer == 8 || collision.gameObject.layer == 10 || collision.gameObject.layer == 12)
+        {
+            GetComponent<Animator>().SetBool("isDead", true);
+            BoomBox.PlaySound(SoundPlayer.SoundType.PlayerDeath, transform.position);
+            DeathParticleSystem.Play();
+            DisableComponents();
+            StartCoroutine(DelayParticleStopAndLoadMenu());
+        }
     }
 
     void UpdateStatistics()

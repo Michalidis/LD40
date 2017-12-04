@@ -12,6 +12,7 @@ public class Statistics : MonoBehaviour
     public int ProjectilesDeflected;
     public float LongestRunInSeconds;
     public float TotalTimeInSeconds;
+    public int Currency;
     // Use this for initialization
     void Start()
     {
@@ -35,7 +36,9 @@ public class Statistics : MonoBehaviour
                 .Append(string.Format("Your have destroyed {0} enemy ships\n", EnemyKills))
                 .Append(string.Format("Your have deflected {0} projectiles\n", ProjectilesDeflected))
                 .Append(string.Format("Your longest run lasted for {0}m {1}s\n", Mathf.RoundToInt(LongestRunInSeconds / 60), Mathf.RoundToInt(LongestRunInSeconds % 60)))
-                .Append(string.Format("Your longest run lasted for {0}h {1}m {2}s\n", Mathf.RoundToInt(TotalTimeInSeconds / 60 / 60), Mathf.RoundToInt(TotalTimeInSeconds % 3600 / 60), Mathf.RoundToInt(TotalTimeInSeconds % 60)));
+                .Append(string.Format("Your longest run lasted for {0}h {1}m {2}s\n", Mathf.RoundToInt(TotalTimeInSeconds / 60 / 60), Mathf.RoundToInt(TotalTimeInSeconds % 3600 / 60), Mathf.RoundToInt(TotalTimeInSeconds % 60)))
+                .Append(string.Format("\nYou currently have {0} Metal Gears to spend\n", Currency))
+                .Append(string.Format("Note: You can earn Metal Gears by deflecting projectiles and destroying enemy ships.")); ;
 
             t.text = sb.ToString();
         }
@@ -51,6 +54,7 @@ public class Statistics : MonoBehaviour
             globalStats.ProjectilesDeflected = 0;
             globalStats.EnemyKills = 0;
             globalStats.LongestRunInSeconds = 0;
+            globalStats.Currency = 0;
 
             globalStats.RewriteStatistics_MainMenuONLY();
         }

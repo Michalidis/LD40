@@ -34,5 +34,6 @@ public class PersistentInfoManager : MonoBehaviour
         stats.EnemyKills += EnemyKillCount_Current;
         stats.ProjectilesDeflected += DeflectedProjectilesCount_Current;
         stats.PlayerDeaths++;
+        stats.Currency += (int)(EnemyKillCount_Current * CurrentRun_Time / 100 + DeflectedProjectilesCount_Current / 5);
     }
 }
