@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114220642065911456}
   - component: {fileID: 114297427214163778}
   - component: {fileID: 114996422572632100}
+  - component: {fileID: 114513977386874586}
   m_Layer: 5
   m_Name: UpgradeButton
   m_TagString: Untagged
@@ -98,6 +99,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114513977386874586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929408837212424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6cd01797de47c41b320eb7c32e0df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114996422572632100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,6 +122,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToolTipText: 
+  CurrentBonus: 0
+  BonusIncreasePerUpgrade: 0
+  NextBonus: 0
+  UpgradeCost: 0
+  CostIncreasePerUpgrade: 0
+  Level: 0
 --- !u!222 &222078090291899014
 CanvasRenderer:
   m_ObjectHideFlags: 1

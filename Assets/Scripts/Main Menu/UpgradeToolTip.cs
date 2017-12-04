@@ -10,16 +10,21 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public string ToolTipText;
 
     public float CurrentBonus;
+    public float BonusIncreasePerUpgrade;
     public float NextBonus;
 
-    public int NextCost;
+    public int UpgradeCost;
+    public int CostIncreasePerUpgrade;
 
+    public int Level;
     private Text textTarget;
 
     // Use this for initialization
     void Start()
     {
         textTarget = GameObject.Find("ToolTip").GetComponent<Text>();
+
+        transform.GetComponent<Button>().onClick.AddListener(Upgrade);
     }
 
     // Update is called once per frame
@@ -35,9 +40,39 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        textTarget.text = ToolTipText
-            + "\nUpgrade Cost - " + NextCost + " Metal Gears."
-            + "\nCurrent Bonus - " + CurrentBonus * 100 + "%."
-            + "\nNext Bonus - " + NextBonus * 100 + "%.";
+        PrintToolTip();
+    }
+
+    void PrintToolTip()
+    {
+        textTarget.text = "Current Level: " + Level
+            + ToolTipText
+            + "\nUpgrade Cost: " + UpgradeCost + " Metal Gears."
+            + "\nCurrent Bonus: " + CurrentBonus * 100 + "%."
+            + "\nNext Bonus: " + NextBonus * 100 + "%.";
+    }
+
+    public void Upgrade()
+    {
+        Statistics stats = GameObject.Find("IndestructibleInfo").GetComponentInChildren<Statistics>();
+
+        if (stats.Currency >= UpgradeCost)
+            PerformUpgradePurchase(stats);
+    }
+
+    void PerformUpgradePurchase(Statistics stats)
+    {
+        CurrentBonus = NextBonus;
+        NextBonus += BonusIncreasePerUpgrade;
+
+        stats.Currency -= UpgradeCost;
+        UpgradeCost += CostIncreasePerUpgrade;
+
+        BonusIncreasePerUpgrade = (float)(BonusIncreasePerUpgrade * 0.95);
+        CostIncreasePerUpgrade = (int)(CostIncreasePerUpgrade * 1.15);
+
+        Level++;
+
+        PrintToolTip();
     }
 }

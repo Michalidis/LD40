@@ -29,7 +29,7 @@ public class ProjectileReflecter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && timeLeftToAttack <= 0)
         {
             GetComponent<Animator>().SetBool("isAttacking", true);
-            timeLeftToAttack = timeBetweenAttacks;
+            timeLeftToAttack = Mathf.Max(timeBetweenAttacks, 0);
         }
     }
 
