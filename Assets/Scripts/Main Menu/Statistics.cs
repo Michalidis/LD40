@@ -32,13 +32,13 @@ public class Statistics : MonoBehaviour
             Text t = GameObject.Find("Statistics_Text").GetComponent<Text>();
             StringBuilder sb = new StringBuilder();
 
-            sb.Append(string.Format("Your have died {0}x\n", PlayerDeaths))
-                .Append(string.Format("Your have destroyed {0} enemy ships\n", EnemyKills))
-                .Append(string.Format("Your have deflected {0} projectiles\n", ProjectilesDeflected))
+            sb.Append(string.Format("You have died {0}x\n", PlayerDeaths))
+                .Append(string.Format("You have destroyed {0} enemy ships\n", EnemyKills))
+                .Append(string.Format("You have deflected {0} projectiles\n", ProjectilesDeflected))
                 .Append(string.Format("Your longest run lasted for {0}m {1}s\n", Mathf.RoundToInt(LongestRunInSeconds / 60), Mathf.RoundToInt(LongestRunInSeconds % 60)))
                 .Append(string.Format("Your longest run lasted for {0}h {1}m {2}s\n", Mathf.RoundToInt(TotalTimeInSeconds / 60 / 60), Mathf.RoundToInt(TotalTimeInSeconds % 3600 / 60), Mathf.RoundToInt(TotalTimeInSeconds % 60)))
                 .Append(string.Format("\nYou currently have {0} Metal Gears to spend\n", Currency))
-                .Append(string.Format("Note: You can earn Metal Gears by deflecting projectiles and destroying enemy ships."))
+                .Append(string.Format("\nNote: You can earn Metal Gears by deflecting projectiles and destroying enemy ships."))
                 .Append("\n\tThe longer you survive, the more gears you earn.");
 
             t.text = sb.ToString();
