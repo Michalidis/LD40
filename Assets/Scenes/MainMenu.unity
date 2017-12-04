@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9624b757cf5b7e94e9c714a80c710880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relatedGobs: []
 --- !u!224 &111078158 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
@@ -501,6 +502,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1114971722}
     m_Modifications:
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -603,7 +609,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: NextBonus
-      value: 0.05
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -613,17 +619,17 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: BonusIncreasePerUpgrade
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
-        type: 2}
-      propertyPath: UpgradeCost
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
+      propertyPath: UpgradeCost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
       propertyPath: CostIncreasePerUpgrade
-      value: 5
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114220642065911456, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -631,6 +637,31 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 1c1fb16d2ec6d0d47a79eb5b0281a975,
         type: 3}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2007431227}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SplittingUnlockCheck
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
   m_IsPrefabParent: 0
@@ -734,6 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9624b757cf5b7e94e9c714a80c710880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relatedGobs: []
 --- !u!224 &429157713 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
@@ -1639,6 +1671,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1114971722}
     m_Modifications:
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1762,6 +1799,31 @@ Prefab:
         type: 2}
       propertyPath: CostIncreasePerUpgrade
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 913772407}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PiercingUnlockCheck
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
@@ -2409,6 +2471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9624b757cf5b7e94e9c714a80c710880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relatedGobs: []
 --- !u!1001 &913772404
 Prefab:
   m_ObjectHideFlags: 0
@@ -2515,7 +2578,8 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: Your Projectiles can now pierce through enemy ships.
+      value: 'NEW ABILITY: Your Projectiles can now pierce through enemy ships. Unlocked
+        by increasing your Deflecting Power by at least 25%.'
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -2570,6 +2634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9624b757cf5b7e94e9c714a80c710880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relatedGobs:
+  - {fileID: 1902377374}
 --- !u!1 &944259247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,7 +3075,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: NextBonus
-      value: 0.05
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -3019,17 +3085,17 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: BonusIncreasePerUpgrade
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
-        type: 2}
-      propertyPath: UpgradeCost
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
+      propertyPath: UpgradeCost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
       propertyPath: CostIncreasePerUpgrade
-      value: 5
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 114220642065911456, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -3472,6 +3538,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1114971722}
     m_Modifications:
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -3574,7 +3645,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: NextBonus
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -3584,17 +3655,17 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: BonusIncreasePerUpgrade
-      value: 0.03
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: UpgradeCost
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: CostIncreasePerUpgrade
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114220642065911456, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -3602,6 +3673,31 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 0ec2418eec5c7f7488c1ee1cadbfb84f,
         type: 3}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1672020149}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeflectingProjectilesUnlockCheck
+      objectReference: {fileID: 0}
+    - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
   m_IsPrefabParent: 0
@@ -3610,6 +3706,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224863801354626776, guid: 9a0e4b435f8022740b4ffce65edadd27,
     type: 2}
   m_PrefabInternal: {fileID: 1338212433}
+--- !u!1 &1372809931 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1929408837212424, guid: 9a0e4b435f8022740b4ffce65edadd27,
+    type: 2}
+  m_PrefabInternal: {fileID: 1084533355}
 --- !u!1 &1389352203
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,6 +4528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9624b757cf5b7e94e9c714a80c710880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relatedGobs: []
 --- !u!1 &1665153983
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,8 +4675,9 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: Enemy Projectiles hit by your projectiles will become your projectiles
-        as well.
+      value: 'NEW ABILITY: Enemy Projectiles hit by your projectiles will become your
+        projectiles as well. Unlocked by getting at least 15% chance of splitting
+        projectiles.'
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -4629,6 +4732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9624b757cf5b7e94e9c714a80c710880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relatedGobs: []
 --- !u!1 &1740384458
 GameObject:
   m_ObjectHideFlags: 0
@@ -4788,6 +4892,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6cd01797de47c41b320eb7c32e0df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1902377374 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1929408837212424, guid: 9a0e4b435f8022740b4ffce65edadd27,
+    type: 2}
+  m_PrefabInternal: {fileID: 209169161}
 --- !u!1 &1904787728
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,6 +4948,11 @@ MonoBehaviour:
   PiercingAbilityUnlocked: 0
   SplitAbilityUnlocked: 0
   DeflectingProjectileAbilityUnlocked: 0
+--- !u!1 &1935357759 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1929408837212424, guid: 9a0e4b435f8022740b4ffce65edadd27,
+    type: 2}
+  m_PrefabInternal: {fileID: 1338212433}
 --- !u!1 &1949984807
 GameObject:
   m_ObjectHideFlags: 0
@@ -5234,7 +5348,8 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: You have a chance to split the enemy projectiles.
+      value: 'NEW ABILITY: You have a chance to split the enemy projectiles. Unlocked
+        by being able to pierce through at least 2 enemy ships.'
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -5289,6 +5404,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9624b757cf5b7e94e9c714a80c710880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relatedGobs:
+  - {fileID: 1935357759}
+  - {fileID: 1372809931}
 --- !u!1 &2014776185
 GameObject:
   m_ObjectHideFlags: 0
