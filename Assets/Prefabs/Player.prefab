@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   influenceRadius: 1.34
-  reflectPower: 300
+  deflectPower: 210
   timeBetweenAttacks: 0.5
   timeLeftToAttack: 0
   OnReflect: {fileID: 198628569728491380, guid: 49bc9876749092d44872823db13032ec,

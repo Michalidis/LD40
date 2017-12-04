@@ -1149,7 +1149,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: BonusIncreasePerUpgrade
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -1283,7 +1283,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: BonusIncreasePerUpgrade
-      value: 0.02
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -3301,7 +3301,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: BonusIncreasePerUpgrade
-      value: 0.008
+      value: 0.012
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -3926,7 +3926,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: BonusIncreasePerUpgrade
-      value: -0.02
+      value: -0.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}

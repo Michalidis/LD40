@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        speed *= (GameObject.Find("Upgrades").GetComponent<Upgrades>().movement_speed + 1);
     }
 
     // Update is called once per frame

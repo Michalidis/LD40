@@ -8,7 +8,7 @@ public class ProjectileReflecter : MonoBehaviour
     private SoundPlayer BoomBox;
     private Animator animator;
     public float influenceRadius;
-    public float reflectPower;
+    public float deflectPower;
 
     public float timeBetweenAttacks;
     public float timeLeftToAttack;
@@ -19,6 +19,11 @@ public class ProjectileReflecter : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         BoomBox = GameObject.Find("BoomBox").GetComponent<SoundPlayer>();
+
+        Upgrades upgrData = GameObject.Find("Upgrades").GetComponent<Upgrades>();
+        deflectPower *= (upgrData.deflect_power + 1);
+        influenceRadius *= (upgrData.deflect_radius + 1);
+        timeBetweenAttacks *= (1 + upgrData.deflect_rate);
     }
 
     // Update is called once per frame
@@ -48,7 +53,7 @@ public class ProjectileReflecter : MonoBehaviour
 
             Rigidbody2D rb2d = projectile.GetComponent<Rigidbody2D>();
             rb2d.velocity = Vector2.zero;
-            rb2d.AddForce(reflectDirection * reflectPower);
+            rb2d.AddForce(reflectDirection * deflectPower);
 
             ProjectileRotator prota = projectile.GetComponent<ProjectileRotator>();
             prota.FaceAwayFromDirection(transform.position);

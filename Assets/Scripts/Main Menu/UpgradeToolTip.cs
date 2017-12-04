@@ -67,8 +67,8 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         stats.Currency -= UpgradeCost;
         UpgradeCost += CostIncreasePerUpgrade;
 
-        BonusIncreasePerUpgrade = (float)(BonusIncreasePerUpgrade * 0.95);
-        CostIncreasePerUpgrade = (int)(CostIncreasePerUpgrade * 1.15);
+        BonusIncreasePerUpgrade = (float)(BonusIncreasePerUpgrade * 0.985);
+        CostIncreasePerUpgrade = (int)(CostIncreasePerUpgrade * 1.10);
 
         Level++;
 
