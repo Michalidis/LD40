@@ -38,7 +38,8 @@ public class Statistics : MonoBehaviour
                 .Append(string.Format("Your longest run lasted for {0}m {1}s\n", Mathf.RoundToInt(LongestRunInSeconds / 60), Mathf.RoundToInt(LongestRunInSeconds % 60)))
                 .Append(string.Format("Your longest run lasted for {0}h {1}m {2}s\n", Mathf.RoundToInt(TotalTimeInSeconds / 60 / 60), Mathf.RoundToInt(TotalTimeInSeconds % 3600 / 60), Mathf.RoundToInt(TotalTimeInSeconds % 60)))
                 .Append(string.Format("\nYou currently have {0} Metal Gears to spend\n", Currency))
-                .Append(string.Format("Note: You can earn Metal Gears by deflecting projectiles and destroying enemy ships.")); ;
+                .Append(string.Format("Note: You can earn Metal Gears by deflecting projectiles and destroying enemy ships."))
+                .Append("\n\tThe longer you survive, the more gears you earn.");
 
             t.text = sb.ToString();
         }
