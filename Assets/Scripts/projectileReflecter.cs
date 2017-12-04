@@ -14,6 +14,9 @@ public class ProjectileReflecter : MonoBehaviour
     public float timeLeftToAttack;
 
     public ParticleSystem OnReflect;
+
+    public int ProjectileSplitCount;
+    public float ProjectileSplitChance;
     // Use this for initialization
     void Start()
     {
@@ -24,6 +27,9 @@ public class ProjectileReflecter : MonoBehaviour
         deflectPower *= (upgrData.deflect_power + 1);
         influenceRadius *= (upgrData.deflect_radius + 1);
         timeBetweenAttacks *= (1 + upgrData.deflect_rate);
+
+        ProjectileSplitChance = upgrData.projectile_split_chance;
+        ProjectileSplitCount = (int)upgrData.projectile_split_count;
     }
 
     // Update is called once per frame
@@ -40,7 +46,7 @@ public class ProjectileReflecter : MonoBehaviour
 
     public PersistentInfoManager Manager;
 
-    public void ReflectProjectiles()
+    public void DeflectProjectiles()
     {
         Vector2 reflectionCenter = gameObject.transform.position;
 
@@ -61,6 +67,8 @@ public class ProjectileReflecter : MonoBehaviour
             ProjectileProperties prop = projectile.GetComponent<ProjectileProperties>();
             prop.ChangeToDeflected();
 
+            SplitProjectile(projectile.gameObject, reflectDirection);
+
             ParticleSystem ps = Instantiate(OnReflect);
             ps.transform.position = projectile.transform.position;
             Destroy(ps.gameObject, 5f);
@@ -72,6 +80,23 @@ public class ProjectileReflecter : MonoBehaviour
             BoomBox.PlaySound(SoundPlayer.SoundType.Deflect, transform.position);
         else
             BoomBox.PlaySound(SoundPlayer.SoundType.Swish, transform.position);
+    }
+
+    void SplitProjectile(GameObject projectile, Vector2 Direction)
+    {
+        for (int i = 0; i < ProjectileSplitCount; i++)
+        {
+            if (Random.Range(0, 1) <= ProjectileSplitChance)
+            {
+                GameObject proj = Instantiate(projectile);
+                proj.transform.position = projectile.transform.position;
+                proj.name = "Projectile_Split";
+                Vector2 v;
+                if (i % 2 == 0) v = new Vector2(0, Direction.y / (i + 2));
+                else v = new Vector2(Direction.x / (i + 2), 0);
+                proj.GetComponent<Rigidbody2D>().AddForce((Direction - v) * deflectPower);
+            }
+        }
     }
 
     void OnDrawGizmos()
