@@ -7,14 +7,44 @@ public class EnemySpawner : MonoBehaviour
 
     public float nextSpawn;
     public float defaultSpawnTime;
-    public GameObject[] ArrayOfEnemies;
+    private GameObject[] ArrayOfEnemies;
 
+    public List<GameObject> AllEnemies;
 
     // Use this for initialization
     void Start()
     {
+        Upgrades ups = GameObject.Find("Upgrades").GetComponent<Upgrades>();
+
         defaultSpawnTime *=
-            1 - GameObject.Find("Upgrades").GetComponent<Upgrades>().enemy_spawn_speed;
+            1 - ups.enemy_spawn_speed;
+
+        ArrayOfEnemies = new GameObject[] { AllEnemies[0] };
+        GameObject[] _arrayOfEnemies;
+
+        if (ups.Enemy2Unlocked)
+        {
+            _arrayOfEnemies = new GameObject[ArrayOfEnemies.Length + 1];
+            ArrayOfEnemies.CopyTo(_arrayOfEnemies, 0);
+            _arrayOfEnemies[ArrayOfEnemies.Length] = AllEnemies[1];
+            ArrayOfEnemies = _arrayOfEnemies;
+        }
+
+        if (ups.Enemy3Unlocked)
+        {
+            _arrayOfEnemies = new GameObject[ArrayOfEnemies.Length + 1];
+            ArrayOfEnemies.CopyTo(_arrayOfEnemies, 0);
+            _arrayOfEnemies[ArrayOfEnemies.Length] = AllEnemies[2];
+            ArrayOfEnemies = _arrayOfEnemies;
+        }
+
+        if (ups.Enemy4Unlocked)
+        {
+            _arrayOfEnemies = new GameObject[ArrayOfEnemies.Length + 1];
+            ArrayOfEnemies.CopyTo(_arrayOfEnemies, 0);
+            _arrayOfEnemies[ArrayOfEnemies.Length] = AllEnemies[3];
+            ArrayOfEnemies = _arrayOfEnemies;
+        }
     }
 
     public int difficulty;

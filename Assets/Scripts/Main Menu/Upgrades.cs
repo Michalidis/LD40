@@ -17,6 +17,10 @@ public class Upgrades : MonoBehaviour
     public float movement_speed;
     public float enemy_spawn_speed;
 
+    public bool Enemy2Unlocked = false;
+    public bool Enemy3Unlocked = false;
+    public bool Enemy4Unlocked = false;
+
     // Use this for initialization
     void Start()
     {
@@ -40,7 +44,9 @@ public class Upgrades : MonoBehaviour
             FindAndAssignProperToolTips("DeflectRate", _deflect_rate);
             FindAndAssignProperToolTips("FlySpeed", _movement_speed);
             FindAndAssignProperToolTips("EnemySpawnRate", _enemy_spawn_speed);
+
         }
+        ShipUnlockCheck();
     }
 
     public void GetButtonData()
@@ -58,6 +64,37 @@ public class Upgrades : MonoBehaviour
         deflect_rate = _deflect_rate.CurrentBonus;
         movement_speed = _movement_speed.CurrentBonus;
         enemy_spawn_speed = _enemy_spawn_speed.CurrentBonus;
+    }
+
+    void ShipUnlockCheck()
+    {
+        Statistics stats = GameObject.Find("Statistics").GetComponent<Statistics>();
+
+        if (!Enemy2Unlocked)
+            if (stats.LongestRunInSeconds / 60 > 3)
+            {
+                Enemy2Unlocked = true;
+                GameObject.Find("Enemy2Unlocked").GetComponent<UpgradeToolTip>().Level = 1;
+            }
+        if (!Enemy3Unlocked)
+            if (stats.PlayerDeaths > 10)
+            {
+                Enemy3Unlocked = true;
+                GameObject.Find("Enemy3Unlocked").GetComponent<UpgradeToolTip>().Level = 1;
+            }
+        if (!Enemy4Unlocked)
+            if (stats.EnemyKills > 50)
+            {
+                Enemy4Unlocked = true;
+                GameObject.Find("Enemy4Unlocked").GetComponent<UpgradeToolTip>().Level = 1;
+            }
+
+        if (Enemy2Unlocked)
+            GameObject.Find("Enemy2Unlocked").GetComponent<UpgradeToolTip>().Level = 1;
+        if (Enemy3Unlocked)
+            GameObject.Find("Enemy3Unlocked").GetComponent<UpgradeToolTip>().Level = 1;
+        if (Enemy4Unlocked)
+            GameObject.Find("Enemy4Unlocked").GetComponent<UpgradeToolTip>().Level = 1;
     }
 
     private void FindAndAssignProperToolTips(string gobName, UpgradeToolTipHolder toolTip)

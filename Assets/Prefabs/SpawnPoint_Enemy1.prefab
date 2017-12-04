@@ -54,10 +54,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSpawn: 0.3
   defaultSpawnTime: 12
-  ArrayOfEnemies:
+  AllEnemies:
   - {fileID: 1310293739403572, guid: 8b58aa8f325575e4a9aa9c929cab59f0, type: 2}
   - {fileID: 1874338692910510, guid: 46cd789d07610c04a9f927c159ba3185, type: 2}
   - {fileID: 1972522117189426, guid: adf1a463d801e6b4a81dadda90d8cc9e, type: 2}
+  - {fileID: 1334837218503082, guid: fdf82b59cb1ec574595ce5ca9fbf03af, type: 2}
   difficulty: 1
 --- !u!212 &212915435695225916
 SpriteRenderer:

@@ -54,6 +54,8 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                 + "\nUpgrade Cost: " + UpgradeCost + " Metal Gears."
                 + "\nCurrent Bonus: " + CurrentBonus * 100 + "%."
                 + "\nNext Bonus: " + NextBonus * 100 + "%.";
+        else if (UpgradeCost <= 0 && CurrentBonus <= 0 && NextBonus <= 0)
+            textTarget.text = ToolTipText;
         else
             textTarget.text = "Current Level: " + Level + "\n"
                 + ToolTipText
