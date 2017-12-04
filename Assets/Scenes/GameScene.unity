@@ -771,6 +771,11 @@ Prefab:
       propertyPath: Manager
       value: 
       objectReference: {fileID: 1463995582}
+    - target: {fileID: 114980097658383430, guid: 9b4b3931eed8f6d4ca84ae13f83da61b,
+        type: 2}
+      propertyPath: timeBetweenAttacks
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b4b3931eed8f6d4ca84ae13f83da61b, type: 2}
   m_IsPrefabParent: 0

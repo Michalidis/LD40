@@ -49,7 +49,10 @@ public class Statistics : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            Statistics globalStats = GameObject.Find("IndestructibleInfo").GetComponentInChildren<Statistics>();
+            GameObject infoHolder = GameObject.Find("IndestructibleInfo");
+            Statistics globalStats = infoHolder.GetComponentInChildren<Statistics>();
+            Upgrades upgrades = infoHolder.GetComponentInChildren<Upgrades>();
+
             globalStats.PlayerDeaths = 0;
             globalStats.TotalTimeInSeconds = 0;
             globalStats.ProjectilesDeflected = 0;
@@ -58,6 +61,8 @@ public class Statistics : MonoBehaviour
             globalStats.Currency = 0;
 
             globalStats.RewriteStatistics_MainMenuONLY();
+
+            upgrades.Reset();
         }
     }
 }
