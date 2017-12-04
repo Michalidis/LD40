@@ -11,13 +11,17 @@ public class EnemySpawner : MonoBehaviour
 
     public List<GameObject> AllEnemies;
 
+    private float spawnRateIncrease;
+
     // Use this for initialization
     void Start()
     {
         Upgrades ups = GameObject.Find("Upgrades").GetComponent<Upgrades>();
 
+        spawnRateIncrease = ups.enemy_spawn_speed;
+
         defaultSpawnTime *=
-            1 - ups.enemy_spawn_speed;
+            1 - spawnRateIncrease;
 
         ArrayOfEnemies = new GameObject[] { AllEnemies[0] };
         GameObject[] _arrayOfEnemies;
@@ -54,7 +58,7 @@ public class EnemySpawner : MonoBehaviour
         nextSpawn -= Time.deltaTime;
         if (nextSpawn <= 0)
         {
-            if (Random.Range(0f, 1f) > Mathf.Min((1 / Mathf.Pow(difficulty, 0.32f)), 0.7f))
+            if (Random.Range(0f, 1f) >= Mathf.Max(Mathf.Min((1 / Mathf.Pow(difficulty, 0.32f)), 0.7f) - spawnRateIncrease, 0f))
             {
                 difficulty = difficulty + 1;
                 InstantiateEnemy();
