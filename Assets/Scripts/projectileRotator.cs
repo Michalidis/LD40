@@ -10,6 +10,7 @@ public class ProjectileRotator : MonoBehaviour
     private SoundPlayer BoomBox;
 
     private int piercesLeft;
+    private bool deflectionUnlocked;
     // Use this for initialization
     void Start()
     {
@@ -19,6 +20,7 @@ public class ProjectileRotator : MonoBehaviour
         Upgrades ups = GameObject.Find("Upgrades").GetComponent<Upgrades>();
 
         piercesLeft = (int)ups.projectile_pierce_count;
+        deflectionUnlocked = ups.DeflectingProjectileAbilityUnlocked;
     }
 
     // Update is called once per frame
@@ -36,6 +38,10 @@ public class ProjectileRotator : MonoBehaviour
             {
                 EmitParticle(collision.contacts, onBounce);
                 BoomBox.PlaySound(SoundPlayer.SoundType.BounceOffWalls, transform.position);
+            }
+            else
+            {
+                collision.gameObject.GetComponent<ProjectileProperties>().ChangeToDeflected();
             }
 
             if (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 2f)
