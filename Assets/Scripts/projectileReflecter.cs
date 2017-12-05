@@ -37,7 +37,7 @@ public class ProjectileReflecter : MonoBehaviour
     {
         timeLeftToAttack -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Space) && timeLeftToAttack <= 0)
+        if (Input.GetKey(KeyCode.Space) && timeLeftToAttack <= 0)
         {
             GetComponent<Animator>().SetBool("isAttacking", true);
             timeLeftToAttack = Mathf.Max(timeBetweenAttacks, 0);

@@ -154,11 +154,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0.17}
-      - {x: -0.089999996, y: 0.17}
-      - {x: -0.14999999, y: 0.13}
-      - {x: -0.19999999, y: -0.04}
-      - {x: -0.19999999, y: -0.14999999}
-      - {x: -0.099999994, y: -0.14999999}
+      - {x: -0.08039498, y: 0.15719321}
+      - {x: -0.1016732, y: 0.13536963}
+      - {x: -0.11140109, y: 0.00564193}
+      - {x: -0.11140109, y: -0.039922483}
+      - {x: -0.070466936, y: -0.12852146}
       - {x: 0.03, y: -0.13}
       - {x: 0.049999997, y: -0.01}
       - {x: 0.049999997, y: 0.07}
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e629e69374358e445a5a425d432a994d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.072
 --- !u!114 &114675647739111242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,10 +228,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   influenceRadius: 1.34
   deflectPower: 210
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 0.33
   timeLeftToAttack: 0
   OnReflect: {fileID: 198628569728491380, guid: 49bc9876749092d44872823db13032ec,
     type: 2}
+  ProjectileSplitCount: 0
+  ProjectileSplitChance: 0
   Manager: {fileID: 0}
 --- !u!198 &198221126558317260
 ParticleSystem:
