@@ -49,7 +49,7 @@ public class RefreshEnemySpawnRate : MonoBehaviour
 
     public void PiercingUnlockCheck()
     {
-        if (GameObject.Find("DeflectPower").GetComponent<UpgradeToolTip>().CurrentBonus >= 0.25)
+        if (GameObject.Find("DeflectPower").GetComponent<UpgradeToolTip>().CurrentBonus >= 0.22)
         {
             GameObject.Find("PiercingProjectileUnlock").GetComponent<UpgradeToolTip>().Level = 1;
             GameObject.Find("Upgrades").GetComponent<Upgrades>().PiercingAbilityUnlocked = true;
@@ -57,7 +57,7 @@ public class RefreshEnemySpawnRate : MonoBehaviour
     }
     public void SplittingUnlockCheck()
     {
-        if (GameObject.Find("PiercingProjectilesCount").GetComponent<UpgradeToolTip>().CurrentBonus >= 2)
+        if (GameObject.Find("PiercingProjectilesCount").GetComponent<UpgradeToolTip>().CurrentBonus >= 1)
         {
             GameObject.Find("ProjectileSplitUnlock").GetComponent<UpgradeToolTip>().Level = 1;
             GameObject.Find("Upgrades").GetComponent<Upgrades>().SplitAbilityUnlocked = true;
@@ -65,7 +65,7 @@ public class RefreshEnemySpawnRate : MonoBehaviour
     }
     public void DeflectingProjectilesUnlockCheck()
     {
-        if (GameObject.Find("SplitChance").GetComponent<UpgradeToolTip>().CurrentBonus >= 0.15)
+        if (GameObject.Find("SplitChance").GetComponent<UpgradeToolTip>().CurrentBonus >= 0.14)
         {
             GameObject.Find("ProjectileDeflectUnlock").GetComponent<UpgradeToolTip>().Level = 1;
             GameObject.Find("Upgrades").GetComponent<Upgrades>().DeflectingProjectileAbilityUnlocked = true;

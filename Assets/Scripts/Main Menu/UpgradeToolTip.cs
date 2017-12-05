@@ -49,11 +49,17 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     void PrintToolTip()
     {
         if (UpgradeCost > 0)
-            textTarget.text = "Current Level: " + Level + "\n"
-                + ToolTipText
-                + "\nUpgrade Cost: " + UpgradeCost + " Metal Gears."
-                + "\nCurrent Bonus: " + CurrentBonus * 100 + "%."
-                + "\nNext Bonus: " + NextBonus * 100 + "%.";
+            if (BonusIncreasePerUpgrade != 1)
+                textTarget.text = "Current Level: " + Level + "\n"
+                    + ToolTipText
+                    + "\nUpgrade Cost: " + UpgradeCost + " Metal Gears."
+                    + "\nCurrent Bonus: " + CurrentBonus * 100 + "%."
+                    + "\nNext Bonus: " + NextBonus * 100 + "%.";
+            else textTarget.text = "Current Level: " + Level + "\n"
+                    + ToolTipText
+                    + "\nUpgrade Cost: " + UpgradeCost + " Metal Gears."
+                    + "\nCurrent Count: " + CurrentBonus + "."
+                    + "\nNext Count: " + NextBonus + ".";
         else if (UpgradeCost <= 0 && CurrentBonus <= 0 && NextBonus <= 0)
             textTarget.text = ToolTipText;
         else
@@ -78,7 +84,8 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         CurrentBonus = NextBonus;
         NextBonus += BonusIncreasePerUpgrade;
 
-        stats.Currency -= UpgradeCost;
+        if (UpgradeCost > 0)
+            stats.Currency -= UpgradeCost;
         UpgradeCost += CostIncreasePerUpgrade;
 
         if (BonusIncreasePerUpgrade != 1)

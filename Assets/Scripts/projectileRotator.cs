@@ -39,7 +39,7 @@ public class ProjectileRotator : MonoBehaviour
                 EmitParticle(collision.contacts, onBounce);
                 BoomBox.PlaySound(SoundPlayer.SoundType.BounceOffWalls, transform.position);
             }
-            else
+            else if (deflectionUnlocked)
             {
                 collision.gameObject.GetComponent<ProjectileProperties>().ChangeToDeflected();
             }
@@ -52,7 +52,7 @@ public class ProjectileRotator : MonoBehaviour
             if (piercesLeft > 0 && colLayer != 0)
             {
                 piercesLeft--;
-                rigidBody.AddForce(rigidBody.velocity * 500);
+                rigidBody.AddForce(rigidBody.velocity);
                 FaceVelocity();
             }
             else

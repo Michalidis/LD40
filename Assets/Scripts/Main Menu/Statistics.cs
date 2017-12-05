@@ -63,6 +63,8 @@ public class Statistics : MonoBehaviour
 
             globalStats.RewriteStatistics_MainMenuONLY();
 
+            upgrades.Reset();
+
             SceneManager.LoadScene(SceneName);
         }
     }

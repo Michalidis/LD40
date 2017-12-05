@@ -59,8 +59,15 @@ public class Upgrades : MonoBehaviour
             FindAndAssignProperToolTips("SplitCount", _projectile_split_count);
         }
         ShipUnlockCheck();
+        UnlockablesCheck();
     }
-
+    void UnlockablesCheck()
+    {
+        RefreshEnemySpawnRate resr = GameObject.Find("EnemySpawnRate").GetComponent<RefreshEnemySpawnRate>();
+        resr.PiercingUnlockCheck();
+        resr.SplittingUnlockCheck();
+        resr.DeflectingProjectilesUnlockCheck();
+    }
     public void GetButtonData()
     {
         Upgrades globalUpgrades = GameObject.Find("IndestructibleInfo").GetComponentInChildren<Upgrades>();
@@ -132,6 +139,35 @@ public class Upgrades : MonoBehaviour
     private UpgradeToolTipHolder GetToolTip(string fromObjectName)
     {
         return new UpgradeToolTipHolder(GameObject.Find(fromObjectName).GetComponent<UpgradeToolTip>());
+    }
+
+    public void Reset()
+    {
+        _deflect_power = null;
+        _deflect_rate = null;
+        _deflect_radius = null;
+        _movement_speed = null;
+        _enemy_spawn_speed = null;
+        _projectile_pierce_count = null;
+        _projectile_split_chance = null;
+        _projectile_split_count = null;
+
+        deflect_power = 0;
+        deflect_rate = 0;
+        deflect_radius = 0;
+        movement_speed = 0;
+        enemy_spawn_speed = 0;
+        projectile_pierce_count = 0;
+        projectile_split_chance = 0;
+        projectile_split_count = 0;
+
+        Enemy2Unlocked = false;
+        Enemy3Unlocked = false;
+        Enemy4Unlocked = false;
+
+        PiercingAbilityUnlocked = false;
+        SplitAbilityUnlocked = false;
+        DeflectingProjectileAbilityUnlocked = false;
     }
 
     class UpgradeToolTipHolder
