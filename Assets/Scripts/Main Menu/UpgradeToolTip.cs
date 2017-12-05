@@ -13,7 +13,7 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public float NextBonus;
 
     public int UpgradeCost;
-    public int CostIncreasePerUpgrade;
+    public float CostIncreasePerUpgrade;
 
     public int Level;
     private Text textTarget;
@@ -86,12 +86,12 @@ public class UpgradeToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
         if (UpgradeCost > 0)
             stats.Currency -= UpgradeCost;
-        UpgradeCost += CostIncreasePerUpgrade;
+        UpgradeCost += (int)CostIncreasePerUpgrade;
 
         if (BonusIncreasePerUpgrade != 1)
             BonusIncreasePerUpgrade = (float)(BonusIncreasePerUpgrade * 0.985);
 
-        CostIncreasePerUpgrade = (int)(CostIncreasePerUpgrade * 1.10);
+        CostIncreasePerUpgrade = (float)(CostIncreasePerUpgrade * 1.10);
         Level++;
 
         PrintToolTip();

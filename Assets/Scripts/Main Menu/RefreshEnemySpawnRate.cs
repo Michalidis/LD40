@@ -43,13 +43,15 @@ public class RefreshEnemySpawnRate : MonoBehaviour
 
     public void UpgradeCheck()
     {
-        if (GameObject.Find("DeflectRate").GetComponent<UpgradeToolTip>().Level % 2 == 0)
-            GameObject.Find("EnemySpawnRate").GetComponent<UpgradeToolTip>().Upgrade();
+        UpgradeToolTip DeflectRate = GameObject.Find("DeflectRate").GetComponent<UpgradeToolTip>();
+        UpgradeToolTip EnemySpawnRate = GameObject.Find("EnemySpawnRate").GetComponent<UpgradeToolTip>();
+        if (DeflectRate.Level / 2 == EnemySpawnRate.Level + 1 && DeflectRate.Level % 2 == 0)
+            EnemySpawnRate.Upgrade();
     }
 
     public void PiercingUnlockCheck()
     {
-        if (GameObject.Find("DeflectPower").GetComponent<UpgradeToolTip>().CurrentBonus >= 0.22)
+        if (GameObject.Find("DeflectPower").GetComponent<UpgradeToolTip>().CurrentBonus >= 0.25)
         {
             GameObject.Find("PiercingProjectileUnlock").GetComponent<UpgradeToolTip>().Level = 1;
             GameObject.Find("Upgrades").GetComponent<Upgrades>().PiercingAbilityUnlocked = true;
@@ -57,7 +59,7 @@ public class RefreshEnemySpawnRate : MonoBehaviour
     }
     public void SplittingUnlockCheck()
     {
-        if (GameObject.Find("PiercingProjectilesCount").GetComponent<UpgradeToolTip>().CurrentBonus >= 1)
+        if (GameObject.Find("PiercingProjectilesCount").GetComponent<UpgradeToolTip>().CurrentBonus >= 2)
         {
             GameObject.Find("ProjectileSplitUnlock").GetComponent<UpgradeToolTip>().Level = 1;
             GameObject.Find("Upgrades").GetComponent<Upgrades>().SplitAbilityUnlocked = true;
@@ -65,7 +67,7 @@ public class RefreshEnemySpawnRate : MonoBehaviour
     }
     public void DeflectingProjectilesUnlockCheck()
     {
-        if (GameObject.Find("SplitChance").GetComponent<UpgradeToolTip>().CurrentBonus >= 0.14)
+        if (GameObject.Find("SplitChance").GetComponent<UpgradeToolTip>().CurrentBonus >= 0.15)
         {
             GameObject.Find("ProjectileDeflectUnlock").GetComponent<UpgradeToolTip>().Level = 1;
             GameObject.Find("Upgrades").GetComponent<Upgrades>().DeflectingProjectileAbilityUnlocked = true;

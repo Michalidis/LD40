@@ -26,7 +26,7 @@ public class ProjectileReflecter : MonoBehaviour
         Upgrades upgrData = GameObject.Find("Upgrades").GetComponent<Upgrades>();
         deflectPower *= (upgrData.deflect_power + 1);
         influenceRadius *= (upgrData.deflect_radius + 1);
-        timeBetweenAttacks *= (1 + upgrData.deflect_rate);
+        timeBetweenAttacks = Mathf.Max(timeBetweenAttacks + (upgrData.deflect_rate * timeBetweenAttacks), 0.0175f);
 
         ProjectileSplitChance = upgrData.projectile_split_chance;
         ProjectileSplitCount = (int)upgrData.projectile_split_count;
@@ -37,7 +37,7 @@ public class ProjectileReflecter : MonoBehaviour
     {
         timeLeftToAttack -= Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.Space) && timeLeftToAttack <= 0)
+        if (Input.GetKey(KeyCode.Space) && timeLeftToAttack <= 0 && !GetComponent<Animator>().GetBool("isAttacking"))
         {
             GetComponent<Animator>().SetBool("isAttacking", true);
             timeLeftToAttack = Mathf.Max(timeBetweenAttacks, 0);
@@ -86,7 +86,7 @@ public class ProjectileReflecter : MonoBehaviour
     {
         for (int i = 0; i < ProjectileSplitCount; i++)
         {
-            if (Random.Range(0, 1) <= ProjectileSplitChance)
+            if (Random.Range(0f, 1f) <= ProjectileSplitChance)
             {
                 GameObject proj = Instantiate(projectile);
                 proj.transform.position = projectile.transform.position;
@@ -95,6 +95,7 @@ public class ProjectileReflecter : MonoBehaviour
                 if (i % 2 == 0) v = new Vector2(0, Direction.y / (i + 2));
                 else v = new Vector2(Direction.x / (i + 2), 0);
                 proj.GetComponent<Rigidbody2D>().AddForce((Direction - v) * deflectPower);
+                proj.GetComponent<ProjectileRotator>().FaceAwayFromDirection(transform.position);
             }
         }
     }

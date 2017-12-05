@@ -9,8 +9,8 @@ public class ProjectileRotator : MonoBehaviour
     public ParticleSystem onBounce;
     private SoundPlayer BoomBox;
 
-    private int piercesLeft;
-    private bool deflectionUnlocked;
+    public int piercesLeft;
+    public bool deflectionUnlocked;
     // Use this for initialization
     void Start()
     {
@@ -49,10 +49,12 @@ public class ProjectileRotator : MonoBehaviour
         }
         else
         {
-            if (piercesLeft > 0 && colLayer != 0)
+            if (piercesLeft > 0 && colLayer != 0 && colLayer != 13)
             {
                 piercesLeft--;
                 rigidBody.AddForce(rigidBody.velocity);
+                if (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 2f)
+                    Destroy(gameObject);
                 FaceVelocity();
             }
             else

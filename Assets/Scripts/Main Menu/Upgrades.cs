@@ -96,19 +96,19 @@ public class Upgrades : MonoBehaviour
         Statistics stats = GameObject.Find("Statistics").GetComponent<Statistics>();
 
         if (!Enemy2Unlocked)
-            if (stats.LongestRunInSeconds / 60 > 3)
+            if (stats.TotalTimeInSeconds / 60 >= 5)
             {
                 Enemy2Unlocked = true;
                 GameObject.Find("Enemy2Unlocked").GetComponent<UpgradeToolTip>().Level = 1;
             }
         if (!Enemy3Unlocked)
-            if (stats.PlayerDeaths > 10)
+            if (stats.PlayerDeaths > 15)
             {
                 Enemy3Unlocked = true;
                 GameObject.Find("Enemy3Unlocked").GetComponent<UpgradeToolTip>().Level = 1;
             }
         if (!Enemy4Unlocked)
-            if (stats.EnemyKills > 50)
+            if (stats.EnemyKills > 200)
             {
                 Enemy4Unlocked = true;
                 GameObject.Find("Enemy4Unlocked").GetComponent<UpgradeToolTip>().Level = 1;
@@ -179,7 +179,7 @@ public class Upgrades : MonoBehaviour
         public float NextBonus;
 
         public int UpgradeCost;
-        public int CostIncreasePerUpgrade;
+        public float CostIncreasePerUpgrade;
 
         public int Level;
 

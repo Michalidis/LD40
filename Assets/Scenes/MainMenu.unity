@@ -1235,7 +1235,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: Reinforcements have arrived! Unlocked by dying 10 or more times in total.
+      value: Reinforcements have arrived! Unlocked by dying 15 or more times in total.
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -1421,7 +1421,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: Enemy Reinforcements have arrived! Unlocked by destroying 50 or more
+      value: Enemy Reinforcements have arrived! Unlocked by destroying 200 or more
         enemy ships in total.
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
@@ -1659,7 +1659,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: CostIncreasePerUpgrade
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a0e4b435f8022740b4ffce65edadd27, type: 2}
@@ -1798,7 +1798,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: CostIncreasePerUpgrade
-      value: 5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -3095,7 +3095,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: CostIncreasePerUpgrade
-      value: 400
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114220642065911456, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -3671,7 +3671,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: CostIncreasePerUpgrade
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 114220642065911456, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -4503,7 +4503,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: CostIncreasePerUpgrade
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -5152,8 +5152,8 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: ToolTipText
-      value: Reinforcements have arrived! Unlocked by surviving for at least 3 minutes
-        in single run.
+      value: Reinforcements have arrived! Unlocked fighting for at least 5 minutes
+        in total.
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
@@ -5635,7 +5635,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: CostIncreasePerUpgrade
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
