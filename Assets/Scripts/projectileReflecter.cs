@@ -26,7 +26,7 @@ public class ProjectileReflecter : MonoBehaviour
         Upgrades upgrData = GameObject.Find("Upgrades").GetComponent<Upgrades>();
         deflectPower *= (upgrData.deflect_power + 1);
         influenceRadius *= (upgrData.deflect_radius + 1);
-        timeBetweenAttacks = Mathf.Max(timeBetweenAttacks + (upgrData.deflect_rate * timeBetweenAttacks), 0.0175f);
+        timeBetweenAttacks = Mathf.Max(timeBetweenAttacks + (upgrData.deflect_rate * timeBetweenAttacks), 0.175f);
 
         ProjectileSplitChance = upgrData.projectile_split_chance;
         ProjectileSplitCount = (int)upgrData.projectile_split_count;

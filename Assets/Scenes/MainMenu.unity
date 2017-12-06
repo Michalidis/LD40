@@ -5640,7 +5640,7 @@ Prefab:
     - target: {fileID: 114996422572632100, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
       propertyPath: BonusIncreasePerUpgrade
-      value: -0.04
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 114297427214163778, guid: 9a0e4b435f8022740b4ffce65edadd27,
         type: 2}
