@@ -18,6 +18,6 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        _rigidbody2D.MovePosition(_rigidbody2D.position + movement * speed);
+        _rigidbody2D.MovePosition(_rigidbody2D.position + movement * speed * Time.deltaTime);
     }
 }
